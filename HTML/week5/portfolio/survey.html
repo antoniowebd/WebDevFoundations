@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form - Week 3</title>
+    <style>
+        strong { 
+          color: red;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        }
+
+        tr:nth-child(even) {
+          background-color: #D6EEEE;
+        }
+
+        tr:nth-child(odd) {
+          background-color:peachpuff;
+        }
+
+        th{
+            background-color:steelblue;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Create a form for user feedback with text input fields, radio buttons, a checkbox, and a submit button -->
+    <form id="feedbackForm" action="thankyou.html" method="get" style="border:1px solid black; padding: 10px; max-width: 800px; background-color: beige;" autocomplete="on">
+        <img src="images/gym.jpg" alt="image of feedback" style="max-width:100%;height: auto;display: block;margin-left: auto;margin-right: auto;" >    
+        <h2>Fitness Center Satisfaction Survey</h2>
+
+        <fieldset style="background-color:darkseagreen;">
+         <div style="text-align: center;">   
+            <label for="fname"><b>First Name</b> <strong>*</strong></label><br>
+            <input type="text" id="fname" name="fname" required><br>
+            <label for="lname"><b>Last Name</b> <strong>*</strong></label><br>
+            <input type="text" id="lname" name="lname" required><br>
+            <label for="membership"><b>Membership Number</b> <strong>*</strong></label><br>
+            <input type="membership" id="membership" name="membership" required>
+        </div>
+        </fieldset>
+        <br>
+
+        <fieldset style="background-color: goldenrod;">
+        <div style="text-align: center;">    
+            <label for="course"><b>What branch do you train out?</b> <strong>*</strong></label><br>
+            <select id="course" name="course">
+                <option value="#">Select an option</option>
+                <option value="Sandy">Sandy</option>
+                <option value="Herriman">Herriman</option>
+                <option value="Jordan">South Jordan</option>
+            </select>
+        </div>
+        </fieldset>
+        <br>
+        
+        <fieldset style="background-color:tan;">
+        <p><b>Choose the best answer for each of the following</b> <strong>*</strong></p>
+        <table>
+            <tr>
+            <th style="width: 40%;"><h3></h3></th>
+            <th style="width: 10%;"><h3>Excellent</h3></th>
+            <th style="width: 10%;"><h3>Fair</h3></th>
+            <th style="width: 10%;"><h3>Neutral</h3></th>
+            <th style="width: 10%;"><h3>Regular</h3></th>
+            <th style="width: 10%;"><h3>Bad</h3></th>
+            </tr>
+            <tr>
+                <td>    
+                <label for="option1">Facility Cleaning</label>
+                </td>
+                
+                <td>
+                    <div style="text-align: center;">
+                        <input type="radio" id="option1" name="option" value="1">
+                    </div>
+                </td>
+                <td>
+                    <div style="text-align: center;">
+                        <input type="radio" id="option1" name="option" value="2">
+                    </div>
+                </td>
+                <td>
+                    <div style="text-align: center;">
+                        <input type="radio" id="option1" name="option" value="3">
+                    </div>
+                </td>
+                <td>
+                    <div style="text-align: center;">
+                        <input type="radio" id="option1" name="option" value="4">
+                    </div>
+                </td>
+                <td>
+                    <div style="text-align: center;">
+                        <input type="radio" id="option1" name="option" value="5">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>    
+                <label for="option2">Qualified trainers</label>
+                </td>
+                
+                <td>
+                    <div style="text-align: center;">
+                        <input type="radio" id="option2" name="option2" value="1">
+                    </div>
+                </td>
+                <td>
+                    <div style="text-align: center;">
+                        <input type="radio" id="option2" name="option2" value="2">
+                    </div>
+                </td>
+                <td>
+                    <div style="text-align: center;">
+                        <input type="radio" id="option2" name="option2" value="3">
+                    </div>
+                </td>
+                <td>
+                    <div style="text-align: center;">
+                        <input type="radio" id="option2" name="option2" value="4">
+                    </div>
+                </td>
+                <td>
+                    <div style="text-align: center;">
+                        <input type="radio" id="option2" name="option2" value="5">
+                    </div>
+                </td>
+            </tr>       
+            
+            <tr>
+                <td>    
+                <label for="option3">Equipment in good condition</label>
+                </td>
+                
+                <td>
+                    <div style="text-align: center;">
+                        <input type="radio" id="option3" name="option3" value="1">
+                    </div>
+                </td>
+                <td>
+                    <div style="text-align: center;">
+                        <input type="radio" id="option3" name="option3" value="2">
+                    </div>
+                </td>
+                <td>
+                    <div style="text-align: center;">
+                        <input type="radio" id="option3" name="option3" value="3">
+                    </div>
+                </td>
+                <td>
+                    <div style="text-align: center;">
+                        <input type="radio" id="option3" name="option3" value="4">
+                    </div>
+                </td>
+                <td>
+                    <div style="text-align: center;">
+                        <input type="radio" id="option3" name="option3" value="5">
+                    </div>
+                </td>
+            </tr>       
+
+            
+        </table>
+        </fieldset>
+        <br>
+
+        <fieldset style="background-color:rgb(190, 185, 185);">
+        <p><b>What areas do you use?</b> <strong>*</strong></p>
+            <input type="checkbox" id="course1" name="course1" value="communication">
+            <label for="area1"> Swimming Pool</label><br>
+            <input type="checkbox" id="course2" name="course2" value="problem">
+            <label for="area2"> Weights</label><br>
+            <input type="checkbox" id="course3" name="course3" value="team">
+            <label for="area3"> Studio Classes</label>
+        </fieldset><br>
+    
+        <fieldset>    
+        <label for="feedback">Comments or Suggestions:</label><br>
+        <textarea id="feedback" name="feedback" rows="5" cols="80" placeholder="Leave your message here..."></textarea>
+        </fieldset>
+        <br><br>
+
+
+
+        <div style="text-align: right; " >
+            <input type="submit" value="Submit" style="background-color: cadetblue; margin-left: auto;">
+        </div>
+    </form>
+
+</body>
+</html>

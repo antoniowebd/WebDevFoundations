@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+  }
+  .menu {
+    float: left;
+    width: 20%;
+  }
+  .menuitem {
+    padding: 8px;
+    margin-top: 7px;
+    border-bottom: 1px solid #f5f1f1;
+  }
+  .main {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+  #fotos {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .encabezado, .encabezado2{
+    float: left;
+    width: 100%;
+    padding: 0px;
+    overflow: hidden;
+    display: flexbox;
+    margin-bottom: 10px;
+  }
+  .encabezado h1, .encabezado h3, .encabezado2 h1, .encabezado2 h3{
+    text-align: center;
+    vertical-align: middle;
+    color:gold;
+  }
+  
+  #logo-contenedor{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #logo-contenedor>img{
+    max-width: 50%;
+    border: 2px solid red;
+  }
+  .right {
+    background-color: lightblue;
+    float: left;
+    width: 20%;
+    padding: 10px 15px;
+    margin-top: 7px;
+  }
+  .right h3{
+    text-align: center;
+    font-style: italic;
+  }
+
+.menuitem{ 
+    color:#f4745e;
+    text-decoration-line: underline;
+    text-decoration-color:darkred;
+}
+.vidhor-card{
+  margin-top: -50px;
+}
+.vidhor-msg{
+  text-align: center;
+  margin-top: -80px;  
+}
+.vid2-msg{
+  text-align: center;
+  margin-top: -80px;
+}
+.vid1-msg, .vid3-msg, .vid4-msg{
+  text-align: center;
+}
+.fotos{
+  display:flex;
+  align-items: center;
+}
+  @media only screen and (max-width:800px) {
+    /* For tablets: */
+    .main, .encabezado {
+      width: 80%;
+      padding: 0;
+    }
+    .right {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .menu, .main, .right, .encabezado {
+      width: 100%;
+    }
+  }
+
+  .titulo {
+    color:red ;
+}
+
+
+
+.slider {
+    background:fixed;
+    height: fit-content;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper {
+    width:70%;
+    height:auto;
+}
+
+.swiper-slide img {
+    width: 100%;
+    
+    /*box-shadow: 10px 10px 5px 12px lightblue;*/
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next {
+    color:red;
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background:red;
+}

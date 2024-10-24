@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles/style.css">
-<title>Coro Riverton 22nd Ward</title>
-<!--<style>
+<style>
+/*
 * {
   box-sizing: border-box;
 }
@@ -32,18 +31,71 @@
   overflow: hidden;
   display: flexbox;
 }
+
+
+*/
+.bottom {
+    background-color: lightblue;
+    position: absolute;
+    top: 93%;
+    left: 10%;
+    
+    width: 80%;
+    padding: 10px 15px;
+
+}
+
+.right {
+    background-color: lightblue;
+    float: right;
+    height: 500px;
+    width: 20%;
+    padding: 10px 15px;
+    margin-top: 7px;
+    overflow-y: scroll;
+}
+
+#logo-contenedor{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+#logo-contenedor>img{
+    max-width: 10%;
+    border: 3px solid red;
+  }
+
 .encabezado h1, .encabezado h3{
   text-align: center;
   vertical-align: middle;
-}
-.right {
-  background-color: lightblue;
-  float: left;
-  width: 20%;
-  padding: 10px 15px;
-  margin-top: 7px;
+  color:#f1f1f1;
+  position: relative;
 }
 
+.photo {
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    width: 20%;
+    padding: 30px 500px 30px 30px;
+    border: 3px solid white;
+}
+
+.text-photo{
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    width: 350px;
+    color: #f1f1f1;
+    
+}
+
+body{
+        background-image: url("/images/moab.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
 @media only screen and (max-width:800px) {
   /* For tablets: */
   .main, .encabezado {
@@ -60,65 +112,64 @@
     width: 100%;
   }
 }
-</style>-->
+
+
+
+</style>
 </head>
 <body style="font-family:Verdana;">
-<div style="overflow:auto">
-  <div class="encabezado">
 
-      <div style="background-image:url(https://live.staticflickr.com/65535/52810540072_79e9006bb2_o.jpg);background-color:#f1f1f1;padding:15px;">
+  <div class="encabezado">
+      <div style="background-color:black;padding:15px;opacity: 0.6;background-size: cover;">
         <div id="logo-contenedor">
-          <img id="imagen1" src="https://live.staticflickr.com/65535/52803975048_d2938e11db.jpg" style="width:200px" alt="photo">
+          <img src="/css/images/awaits.png" alt="photo">
         </div>
-        <h1>Coro Riverton 22nd</h1>
-        <h3>"La música inspiradora puede llenar la mente con pensamientos nobles, promover la acción justa y derramar paz al alma". - Presidente Ezra Taft Benson</h3>
+        <h1>Story Telling</h1>
+        <h3>Trip to Moab, Utah</h3>
       </div>
   </div>    
-</div>
 
-<div style="overflow:auto">
- 
-  <div class="menu">
-    <div class="menuitem">
-      <a href="coro_videos.html">Videos</a>  
-    </div>
-    <div class="menuitem">
-        <a href="coro_testimonios.html">Vivencias</a>
-    </div>
-    <div class="menuitem">
-      <a href="coro_comite.html">El comité</a>
-    </div>
-    <div class="menuitem">
-      <a href="coro_galeria.html">Galería</a>
-    </div>
-    <div class="menuitem">
-      <a href="coro_eventos.html">Próximos eventos</a>
-    </div>
-    <div class="menuitem">
-      <a href="coro_contacto.html">Contacto</a>
-    </div>
-  </div>
+<!--
 
+  
   <div class="main">
     <h2>Grupo coral</h2>
     <p>Le invitamos a formar parte de este gran esfuerzo.</p>
-    <img src="images/IMG-20221218-WA0012.jpg" style="width:100%" alt="Foto del coro">
+    <img src="/images/moab.jpg" style="width:50%" alt="Foto del coro">
   </div>
-  
-  <div class="right" style="background-image:url(https://live.staticflickr.com/65535/52813699933_f01b74573b_c.jpg);background-color:#f1f1f1;padding:15px;">
-    <h2>¿Qué hace el coro?</h2>
-    <p>Ensayar himnos y canciones que se presentarán en diferentes reuniones y actividades del barrio.</p>
-    <br>
-    <h2>¿Por qué?</h2>
-    <p>El propósito es que a través de la música y el canto se invite al Espíritu Santo, se fortalezca nuestro propio espíritu y el de quienes escuchen.</p>
-    <br>
-    <h2>¿Cómo puedo unirme?</h2>
-    <p>Sólo asiste al inicio de un nuevo proyecto o ponte en contacto con los miembros del comité!</p>
+-->  
+    <div>
+    <p class="text-photo">Since I am a nature lover, I like to visit new places. One of the ones I liked the most is <b>Moab</b>. It is located about 220 miles southeast of Salt Lake. <br><br>In <i><strong>Arches Park</strong></i> you can see different sandstone formations that are impressive where the force of nature over a long time is evident.</p>
+  </div>
+  <div>
+    <img class="photo" src="/css/images/arch.jpg" alt="Delicate arch">
+  </div>
+  <div class="right" style="background-image:url(https://live.staticflickr.com/65535/52813699933_f01b74573b_c.jpg);background-color:#f1f1f1;padding:15px;background-repeat:repeat;background-size: cover;">
+    <h1>Benefits of hiking</h1>
+    
+    <h2>Physical Exercise</h2>
+    <p>Hiking is one of the best ways to get exercise. No matter what type of trail you find yourself on, hiking is a great whole-body workout—from head to toe and everything in between.</p>
+    
+    <h2>Mental Health</h2>
+    <p>Being in nature can boost your mood and improve mental health. Spending quality time in the great outdoors reduces stress, 
+        calms anxiety, and can lead to a lower risk of depression, according to a study done by researchers at Stanford University.
+    </p>
+    
+    <h2>Relational Health</h2>
+    <p>You don’t have to go it alone next time you lace up your hiking boots. Grab a friend, neighbor, 
+        or family member for more fun on the trail. Hiking with a partner, or even in a group, can improve the strength and health of your relationships.
+    </p>
   </div>
 </div>
 <br>
 
-<div style="background-image:url(https://live.staticflickr.com/65535/52811099801_15c0246cf5_o.jpg);background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:16px; font-weight: bold;"> Únete al coro y vive experiencias que por seguro te reconfortarán el alma.</div>
+
 
 </body>
+<footer>
+    <div class="bottom" style="background-image:url(https://live.staticflickr.com/65535/52811099801_15c0246cf5_o.jpg);
+        background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:16px; font-weight: bold;"> 
+        "Look deep into nature and you will understand everything better." - Albert Einstein"
+    </div>
+</footer>
 </html>

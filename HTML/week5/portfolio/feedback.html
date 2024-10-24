@@ -17,7 +17,33 @@ th, td {
   padding-left: 15px;
   padding-right: 15px;
 }
-        </style>
+
+.text-alignment{
+    text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.right {
+    background-color: lightblue;
+    height: 100px;
+    width: 60%;
+    padding: 10px 15px;
+    border: solid 3px orange;
+    margin-top: 7px;
+    overflow-y: scroll;
+}
+</style>
 </head>
 <body>
     <a href="./projects.html">Back to Projects</a>
@@ -25,13 +51,19 @@ th, td {
     <form id="feedbackForm" action="thankyou.html" method="get" style="border:1px solid black; padding: 10px; max-width: 800px;" autocomplete="on">
         <img src="images/Feedback-1.jpg" alt="image of feedback" style="max-width:100%;height: auto;display: block;margin-left: auto;margin-right: auto;" >    
         <h2>Training Evaluation</h2>
-        <fieldset>
-        <label for="fname">First Name <strong>*</strong></label><br>
-        <input type="text" id="fname" name="fname" required><br>
-        <label for="lname">Last Name <strong>*</strong></label><br>
-        <input type="text" id="lname" name="lname" required><br>
-        <label for="email">Email <strong>*</strong></label><br>
-        <input type="email" id="email" name="email" required>
+        <fieldset class="flex-container">
+            <div>   
+                <label for="fname">First Name <strong>*</strong></label>
+                <input type="text" id="fname" name="fname" required>
+            </div>
+            <div>
+                <label for="lname">Last Name <strong>*</strong></label>
+                <input type="text" id="lname" name="lname" required>
+            </div>
+            <div>
+                <label for="email">Email <strong>*</strong></label>
+                <input type="email" id="email" name="email" required>
+            </div>
         </fieldset>
         <br>
         <fieldset>
@@ -60,31 +92,32 @@ th, td {
             </tr>
             <tr>
                 <td>    
-                <label for="option1">The presenter(s) communicated clearly</label>
+                    <label for="option1">The presenter(s) communicated clearly</label>
                 </td>
                 
                 <td>
-                    <div style="text-align: center;">
+                    <div class="text-alignment">
                         <input type="radio" id="option1" name="option" value="1">
                     </div>
                 </td>
                 <td>
-                    <div style="text-align: center;">
+                    <div class="text-alignment">
                         <input type="radio" id="option1" name="option" value="2">
                     </div>
                 </td>
                 <td>
-                    <div style="text-align: center;">
+                    <div class="text-alignment">
                         <input type="radio" id="option1" name="option" value="3">
                     </div>
                 </td>
                 <td>
-                    <div style="text-align: center;">
+                    <div class="text-alignment">
                         <input type="radio" id="option1" name="option" value="4">
                     </div>
                 </td>
+                
                 <td>
-                    <div style="text-align: center;">
+                    <div class="text-alignment">
                         <input type="radio" id="option1" name="option" value="5">
                     </div>
                 </td>
@@ -96,27 +129,27 @@ th, td {
                 </td>
                 
                 <td>
-                    <div style="text-align: center;">
+                    <div class="text-alignment">
                         <input type="radio" id="option2" name="option2" value="1">
                     </div>
                 </td>
                 <td>
-                    <div style="text-align: center;">
+                    <div class="text-alignment">
                         <input type="radio" id="option2" name="option2" value="2">
                     </div>
                 </td>
                 <td>
-                    <div style="text-align: center;">
+                    <div class="text-alignment">
                         <input type="radio" id="option2" name="option2" value="3">
                     </div>
                 </td>
                 <td>
-                    <div style="text-align: center;">
+                    <div class="text-alignment">
                         <input type="radio" id="option2" name="option2" value="4">
                     </div>
                 </td>
                 <td>
-                    <div style="text-align: center;">
+                    <div class="text-alignment">
                         <input type="radio" id="option2" name="option2" value="5">
                     </div>
                 </td>
@@ -128,27 +161,27 @@ th, td {
                 </td>
                 
                 <td>
-                    <div style="text-align: center;">
+                    <div class="text-alignment">
                         <input type="radio" id="option3" name="option3" value="1">
                     </div>
                 </td>
                 <td>
-                    <div style="text-align: center;">
+                    <div class="text-alignment">
                         <input type="radio" id="option3" name="option3" value="2">
                     </div>
                 </td>
                 <td>
-                    <div style="text-align: center;">
+                    <div class="text-alignment">
                         <input type="radio" id="option3" name="option3" value="3">
                     </div>
                 </td>
                 <td>
-                    <div style="text-align: center;">
+                    <div class="text-alignment">
                         <input type="radio" id="option3" name="option3" value="4">
                     </div>
                 </td>
                 <td>
-                    <div style="text-align: center;">
+                    <div class="text-alignment">
                         <input type="radio" id="option3" name="option3" value="5">
                     </div>
                 </td>
@@ -160,13 +193,14 @@ th, td {
         <br>
 
         <fieldset>
-        <p><b>Which training courses do you still need to attend?</b> <strong>*</strong></p>
-            <input type="checkbox" id="course1" name="course1" value="communication">
-            <label for="course1"> Communication Skills</label><br>
-            <input type="checkbox" id="course2" name="course2" value="problem">
-            <label for="course2"> Problem Solving</label><br>
-            <input type="checkbox" id="course3" name="course3" value="team">
-            <label for="course3"> Team Building</label>
+            <img src="/css/images/thinking.png" style="float: right;width: 100px;">
+            <p><b>Which training courses do you still need to attend?</b> <strong>*</strong></p>
+                <input type="checkbox" id="course1" name="course1" value="communication">
+                <label for="course1"> Communication Skills</label><br>
+                <input type="checkbox" id="course2" name="course2" value="problem">
+                <label for="course2"> Problem Solving</label><br>
+                <input type="checkbox" id="course3" name="course3" value="team">
+                <label for="course3"> Team Building</label>
         </fieldset><br>
     
         <fieldset>    
@@ -179,6 +213,24 @@ th, td {
 
         <div style="text-align: right; " >
             <input type="submit" value="Submit" style="background-color: cadetblue; margin-left: auto;">
+        </div>
+
+        <div class="right">
+            <h2>
+                Non Disclosure Agreement
+            </h2>
+            <h3>
+                A Non-Disclosure Agreement (also called an NDA or Confidentiality Agreement) 
+                is an essential tool for businesses looking to protect their confidential information. 
+                Under a Non-Disclosure Agreement, a person or organization agrees to protect proprietary 
+                information they've received from another business or individual. 
+                Your Non-Disclosure Agreement should include details like: who owns the information being disclosed and protected; 
+                who's receiving the information; the owner's business; the recipient's business; 
+                the reason the confidential information is being disclosed (for example, the recipient is creating a marketing plan for the information owner); 
+                whether the information consists of financial statements, customer lists and records, trade secrets, technical information, product designs, 
+                inventions, copyrights, pricing structure or source code; the duration of any non-circumvention clause; and whether the obligations of the agreement will 
+                apply for months, years or indefinitely.
+            </h3>
         </div>
     </form>
 

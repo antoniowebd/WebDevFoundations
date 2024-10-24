@@ -24,6 +24,8 @@
     padding: 10px 15px;
     margin-top: 7px;
     overflow-y: scroll;
+    border: solid 2px green;
+    border-radius:10px ;
 }
 
 #logo-contenedor{
@@ -34,6 +36,7 @@
 #logo-contenedor>img{
     max-width: 10%;
     border: 3px solid red;
+    border-radius: 10px;
   }
 
 .encabezado h1, .encabezado h3{
@@ -44,21 +47,28 @@
 }
 
 .photo {
-    position: absolute;
+    position:fixed;
     top: 45%;
     left: 25%;
     width: 20%;
     padding: 30px 500px 30px 30px;
     border: 3px solid white;
+    border-radius: 10px;
 }
 
 .text-photo{
-    position: absolute;
+    position: fixed;
     top: 53%;
     left: 50%;
     width: 350px;
     color: #f1f1f1;
     
+}
+
+.animation{
+  position:fixed;
+  top: 50%;
+  left: 5%;
 }
 
 body{
@@ -98,13 +108,17 @@ body{
         <h1>Story Telling</h1>
         <h3>Trip to Moab, Utah</h3>
       </div>
-  </div>    
+  </div>  
+  <div class="animation">
+    <img src="images/sunshine-2250_256.gif">
+  </div>
   <div>
     <p class="text-photo">Since I am a nature lover, I like to visit new places. One of the ones I liked the most is <b>Moab</b>. It is located about 220 miles southeast of Salt Lake. <br><br>In <i><strong>Arches Park</strong></i> you can see different sandstone formations that are impressive where the force of nature over a long time is evident.</p>
   </div>
   <div>
     <img class="photo" src="images/arch.jpg" alt="Delicate arch">
   </div>
+
   <div class="right" style="background-image:url(https://live.staticflickr.com/65535/52813699933_f01b74573b_c.jpg);background-color:#f1f1f1;padding:15px;background-repeat:repeat;background-size: cover;">
     <h1>Benefits of hiking</h1>
     

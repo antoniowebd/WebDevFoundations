@@ -1,40 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/week5/styles/css_w3_hw.css">
+    
     <title>Survey Form - Week 3</title>
-    <style>
-        strong { 
-          color: red;
-        }
-
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        th, td {
-        padding-top: 10px;
-        padding-bottom: 20px;
-        padding-left: 15px;
-        padding-right: 15px;
-        }
-
-        tr:nth-child(even) {
-          background-color: #D6EEEE;
-        }
-
-        tr:nth-child(odd) {
-          background-color:peachpuff;
-        }
-
-        th{
-            background-color:steelblue;
-        }
-    </style>
+   
 </head>
 <body>
     <a href="./projects.html">Back to Projects</a>
     <!-- Create a form for user feedback with text input fields, radio buttons, a checkbox, and a submit button -->
-    <form id="feedbackForm" action="thankyou.html" method="get" style="border:1px solid black; padding: 10px; max-width: 800px; background-color: beige;" autocomplete="on">
+    <form id="feedbackForm" action="thankyou.html" method="get" style="border:1px solid black; padding: 10px; background-color: gray; background-image: url(/images/backg.jpg); background-size:cover; background-position: top;" autocomplete="on">
         <img src="images/gym.jpg" alt="image of feedback" style="max-width:100%;height: auto;display: block;margin-left: auto;margin-right: auto;" >    
         <h2>Fitness Center Satisfaction Survey</h2>
 
@@ -46,6 +24,7 @@
             <input type="text" id="lname" name="lname" required><br>
             <label for="membership"><b>Membership Number</b> <strong>*</strong></label><br>
             <input type="membership" id="membership" name="membership" required>
+            
         </div>
         </fieldset>
         <br>
@@ -63,16 +42,17 @@
         </fieldset>
         <br>
         
-        <fieldset style="background-color:tan;">
+        <fieldset style="background-color:rgb(223, 217, 132);">
         <p><b>Choose the best answer for each of the following</b> <strong>*</strong></p>
+        <div style="overflow-x: auto;">
         <table>
             <tr>
-            <th style="width: 40%;"><h3></h3></th>
-            <th style="width: 10%;"><h3>Excellent</h3></th>
-            <th style="width: 10%;"><h3>Fair</h3></th>
-            <th style="width: 10%;"><h3>Neutral</h3></th>
-            <th style="width: 10%;"><h3>Regular</h3></th>
-            <th style="width: 10%;"><h3>Bad</h3></th>
+            <th><h3></h3></th>
+            <th><h3>Excellent</h3></th>
+            <th><h3>Fair</h3></th>
+            <th><h3>Neutral</h3></th>
+            <th><h3>Regular</h3></th>
+            <th><h3>Bad</h3></th>
             </tr>
             <tr>
                 <td>    
@@ -172,6 +152,7 @@
 
             
         </table>
+        </div>
         </fieldset>
         <br>
 
@@ -185,16 +166,16 @@
             <label for="area3"> Studio Classes</label>
         </fieldset><br>
     
-        <fieldset>    
-        <label for="feedback">Comments or Suggestions:</label><br>
-        <textarea id="feedback" name="feedback" rows="5" cols="80" placeholder="Leave your message here..."></textarea>
+        <fieldset style="background-color: maroon;">    
+        <label for="feedback" style="color: white;">Comments or Suggestions:</label><br>
+        <textarea id="feedback" name="feedback" rows="8" cols="50" placeholder="Leave your message here..."></textarea>
         </fieldset>
         <br><br>
 
 
 
-        <div style="text-align: right; " >
-            <input type="submit" value="Submit" style="background-color: cadetblue; margin-left: auto;">
+        <div style="text-align: right;" >
+            <input type="submit" value="Submit" style="margin-left: auto;font-size: 16px;" class="button button2">
         </div>
     </form>
 

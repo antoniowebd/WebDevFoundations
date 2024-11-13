@@ -12,7 +12,7 @@ const missions = ["protect the city", "save the world", "fight injustice", "defe
 // Create a function to generate a random superhero name and description
 function generateSuperHero() {
     const adjective = heroAdjectives[Math.floor(Math.random() * heroAdjectives.length)];
-    const noun = heroNouns[Math.floor(Math.random() * heroNouns.length)];
+    const noun = heroNouns[Math.floor(Math.random() * heroNouns.length)];    
     const power = powers[Math.floor(Math.random() * powers.length)];
     const mission = missions[Math.floor(Math.random() * missions.length)];
 

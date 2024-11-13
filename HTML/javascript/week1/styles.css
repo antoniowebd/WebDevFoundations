@@ -19,13 +19,6 @@ button {
     margin-bottom: 20px;
 }
 
-.super{
-    
-    background-size: cover;
-    
-    background-repeat: no-repeat;
-}
-
 #superhero-display {
     margin-top: 20px;
 }
@@ -38,3 +31,8 @@ button {
 #hero-description {
     font-size: 18px;
 }
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+  }

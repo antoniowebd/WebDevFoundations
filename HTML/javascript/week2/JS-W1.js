@@ -16,7 +16,7 @@ else{
     greeting="Good Evening "+name+"! Thank you for reviewing my resume site.";
 }
 if (n==1){
-    document.getElementById("time").innerHTML=greeting;
+    alert(greeting);
 }
 }
 
@@ -25,19 +25,13 @@ if (n==1){
 //validate the input 
 function validateName(name){
     var namePattern=/^[a-zA-Z\s-]+$/;
-    var msj;
- 
     if (!name){
-        msj= "Name is required";
- 
-        document.getElementById("time").innerHTML=msj;
-        return 0;
+        alert("Name is required")
+        return;
     }
     else if (!namePattern.test(name)){
-        msj= "Invalid name";
-        valido=0;
-        document.getElementById("time").innerHTML=msj;
-        return 0;
+        alert("Invalid name");
+        return;
     }
     else{
     

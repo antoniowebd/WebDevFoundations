@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Name Validation using JavaScript</title>
+    <link rel='stylesheet' href="estilo.css" type='text/css' />
+    <link rel='stylesheet' href='form.css' type='text/css' />
+    <script>
+        // Validate First Name and Last Name
+        function validateName(firstName, lastName) {
+            var namePattern = /^[a-zA-Z\s-]+$/;
+
+            if (!firstName || !lastName) {
+                return "First name and last name are required.";
+            }
+
+            if (!namePattern.test(firstName) || !namePattern.test(lastName)) {
+                return "Invalid first name or last name.";
+            }
+
+            return "Valid name.";
+        }
+
+        // Handle form submission
+        function submitForm() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+
+            var validationMessage = validateName(firstName, lastName);
+
+            document.getElementById("result").textContent = validationMessage;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="phppot-container">
+        <h1>Name Validation</h1>
+
+        <form>
+            <div class="row">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" required>
+            </div>
+            <div class="row">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" required>
+            </div>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+
+        <p id="result"></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Name Validation</title>
+    <link rel='stylesheet' href='style.css' type='text/css' />
+    <link rel='stylesheet' href='form.css' type='text/css' />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Handle form submission
+            $('form').submit(function (event) {
+                event.preventDefault();
+
+                var firstName = $('#firstName').val();
+                var lastName = $('#lastName').val();
+
+                var validationMessage = validateName(firstName, lastName);
+
+                $('#result').text(validationMessage);
+            });
+
+            // Validate First Name and Last Name
+            function validateName(firstName, lastName) {
+                // Check if first name and last name are empty
+                if (!firstName || !lastName) {
+                    return "First name and last name are required.";
+                }
+
+                // Check if first name contains only alphabets
+                if (!/^[a-zA-Z]+$/.test(firstName)) {
+                    return "Invalid first name.";
+                }
+
+                // Check if last name contains only alphabets
+                if (!/^[a-zA-Z]+$/.test(lastName)) {
+                    return "Invalid last name.";
+                }
+
+                // Validation passed
+                return "Valid name.";
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="phppot-container">
+        <h1>Name Validation</h1>
+
+        <form>
+            <div class="row">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" required>
+            </div>
+            <div class="row">
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="result"></p>
+    </div>
+</body>
+
+</html>

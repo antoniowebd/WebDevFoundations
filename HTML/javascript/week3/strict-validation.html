@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript Validate Email using Regular Expression
+    (regex)</title>
+<link rel='stylesheet' href='style.css' type='text/css' />
+<link rel='stylesheet' href='form.css' type='text/css' />
+</head>
+<body>
+    <div class="phppot-container">
+        <h1>JavaScript Validate Email using Regular Expression
+            (regex)</h1>
+        <div class="tile-container">
+            <form name="form">
+                <div class="row">
+                    <label for="email">Email address: </label> <input
+                        id="email" name="email" />
+                </div>
+                <div class="row">
+                    <input type="submit" name="submit" value="Submit"
+                        onclick="validateEmail(document.form.email)" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+		function matchEmailRegex(emailStr) {
+			var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			return emailStr.match(emailRegex);
+		};
+
+		function validateEmail(emailField) {
+			var emailStr = emailField.value;
+			if (matchEmailRegex(emailStr)) {
+				alert("Entered value is a valid email.");
+			} else {
+				alert("Entered value is not an email.");
+			}
+			return false;
+		}
+	</script>
+</body>
+</html>

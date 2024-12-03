@@ -2,7 +2,7 @@
     const form = document.getElementById("survey-form");
     const responseDiv = document.getElementById("form-response");*/
 
-    const registrationForm = document.getElementById("registration-form");
+    const form = document.getElementById("registration-form");
 
     form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -45,6 +45,8 @@
         var emailStr = emailField.value;
         if (matchEmailRegex(emailStr)) {
             alert("Entered value is a valid email.");
+            
+            form.reset();
         } else {
             alert("Entered value is not an email.");
         }
@@ -52,27 +54,26 @@
     }
 
 
-    function validateName(firstName, lastName) {
+    function validateName(firstName) {
         var namePattern = /^[a-zA-Z\s-]+$/;
 
-        if (!firstName || !lastName) {
-            return "First name and last name are required.";
+        if (!firstName) {
+            return "Name is required.";
         }
 
-        if (!namePattern.test(firstName) || !namePattern.test(lastName)) {
-            return "Invalid first name or last name.";
+        if (!namePattern.test(firstName)) {
+            return "Invalid Name.";
         }
-
-        return "Valid name.";
+        validateEmail(document.form.email)
+        //return "Valid name.";
     }
 
     // Handle form submission
     function submitForm() {
         var firstName = document.getElementById("firstName").value;
-        var lastName = document.getElementById("lastName").value;
 
-        var validationMessage = validateName(firstName, lastName);
-
+        var validationMessage = validateName(firstName);
+        alert("validationMessage");
         document.getElementById("result").textContent = validationMessage;
     }
 /*})*/

@@ -19,8 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-    validateName(name);
-        
         if (!validateEmail(email)) {
             alert("Please enter a valid email address.");
             return;
@@ -38,21 +36,5 @@ document.addEventListener("DOMContentLoaded", function() {
     function validateEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(String(email).toLowerCase());
-    }
-
-    function validateName(name){
-        var namePattern=/^[a-zA-Z\s-]+$/;
-        if (!name){
-            alert("Name is required")
-            return;
-        }
-        else if (!namePattern.test(name)){
-            alert("Invalid name");
-            return;
-        }
-        else{
-        
-        return 1;
-        }
     }
 });

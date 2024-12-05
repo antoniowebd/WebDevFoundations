@@ -1,6 +1,6 @@
-/*document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("survey-form");
-    const responseDiv = document.getElementById("form-response");*/
+//document.addEventListener("DOMContentLoaded", function() {
+    //const form = document.getElementById("survey-form");
+  //  const responseDiv = document.getElementById("form-response");
 
     const form = document.getElementById("registration-form");
 
@@ -44,13 +44,13 @@
     function validateEmail(emailField) {
         var emailStr = emailField.value;
         if (matchEmailRegex(emailStr)) {
-            alert("Entered value is a valid email.");
+            //alert("Entered value is a valid email.");
+            //return;
             
-            form.reset();
         } else {
             alert("Entered value is not an email.");
         }
-        return false;
+       // return false;
     }
 
 
@@ -62,7 +62,9 @@
         }
 
         if (!namePattern.test(firstName)) {
+            alert("Invalid Name");
             return "Invalid Name.";
+            
         }
         validateEmail(document.form.email)
         //return "Valid name.";
@@ -73,7 +75,8 @@
         var firstName = document.getElementById("firstName").value;
 
         var validationMessage = validateName(firstName);
-        alert("validationMessage");
+        //alert("validationMessage");
         document.getElementById("result").textContent = validationMessage;
     }
-/*})*/
+
+//})

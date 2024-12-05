@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Survey Form</h1>
-    <form action="#" method="post">
+    <form  id="survey-form" action="#" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
 
@@ -49,7 +49,8 @@
         <label for="comments">Comments:</label><br>
         <textarea id="comments" name="comments" rows="4"></textarea><br><br>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit"/>
     </form>
+    <div id="form-response" style="display: none;"></div>
 </body>
 </html>

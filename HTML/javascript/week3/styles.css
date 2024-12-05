@@ -77,9 +77,9 @@ input:invalid {
     border-color: #dc3545;
 }
 
-label::after {
+/*label::after {
     content: ":";
-}
+}*/
 
 input[type="radio"]:checked + label::before,
 input[type="checkbox"]:checked + label::before {

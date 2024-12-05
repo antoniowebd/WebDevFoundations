@@ -39,7 +39,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     })
 
-    function matchEmailRegex(emailStr) {
+    // Email validation function
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    /*function matchEmailRegex(emailStr) {
         const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return emailStr.match(emailRegex);
         //return re.test(String(email).toLowerCase());
@@ -55,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Entered value is not an email.");
         }
        // return false;
-    }
+    }*/
 
 
 /*    function validateName(firstName) {

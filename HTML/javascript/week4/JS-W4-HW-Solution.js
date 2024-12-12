@@ -1,5 +1,5 @@
         // Add an Array of more things you like
-        let likes = ['reading', 'coding', 'hiking', 'photography']
+        let likes = ['cooking', 'basketball', 'dancing', 'listen to music']
 
         // Add Function to Show/Hide Extra Info on Button Click
         function revealExtraInfo() {

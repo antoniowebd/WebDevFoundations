@@ -30,7 +30,7 @@
         <input type="number" id="grade" name="grade" min="0" max="100" required><br><br>
 
 
-        <button type="submit" name="submit">Add Student</button>
+        <button  class="button button2" type="submit" name="submit">Add Student</button>
     </form>
 
 

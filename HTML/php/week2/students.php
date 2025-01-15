@@ -138,8 +138,7 @@
         echo "Highest Grade" . highest($_SESSION['students']) . "<br>";
         echo "Lowest Grade" . lowest($_SESSION['students']) . "<br>";
     }
-session_unset();
-session_destroy();
+
     ?>
 </body>
 </html>

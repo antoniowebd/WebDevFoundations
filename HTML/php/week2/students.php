@@ -149,7 +149,7 @@
 
         echo "</table>";
         echo "<br>";
-        echo "Average Grade " . sumar($_SESSION['students']) / $total_students . "<br>";
+        echo "Average Grade " . round(sumar($_SESSION['students']) / $total_students,1) . "<br>";
         echo "Highest Grade " . highest($_SESSION['students']) . "<br>";
         echo "Lowest Grade " . lowest($_SESSION['students']) . "<br>";
         //echo "Suma de grados " . sumar($_SESSION['students']) . "<br>";

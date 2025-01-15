@@ -46,12 +46,12 @@
 
     // Global variables
     global $total_students;
-    global $totalGrades;
+    global $total_grades;
 
     // Counting total number of students and sum of grades
 
     $total_students = isset($_SESSION['total_studernts']) ? $_SESSION['total_students'] :0;
-    $total_grades = isset($_SESSION['totalGrades']) ? $_SESSION['totalGrades'] :0;
+    $total_grades = isset($_SESSION['total_grades']) ? $_SESSION['total_grades'] :0;
 
     // Get data
 
@@ -70,12 +70,12 @@
         $totalGrades+=$student_grade;
 
         $_SESSION['total_students']=$total_students;
-        $_SESSION['totalGrades'] = $total_Sum;
+        $_SESSION['total_grades'] = $total_grades;
     }
 
 
     // Display the student data
-    if (!empty($_SESSION['students'])) {
+    /*if (!empty($_SESSION['students'])) {
         echo "<h2>Student List</h2>";
         echo "<table border='1' cellpadding='10' cellspacing='0'>";
         echo "<tr><th>Name</th><th>Grade</th></tr>";
@@ -88,11 +88,11 @@
             echo "</tr>";
         }
         echo "</table>";
-    }
+    }*/
 
     // Calculate average grade
-    function average($totalGrades, $total_students) {
-        return $total_students > 0 ? $totalGrades / $total_students :0;
+    function average($total_grades, $total_students) {
+        return $total_students > 0 ? $total_grades / $total_students :0;
     }
 
     // Calculate highest grade
@@ -111,7 +111,7 @@
     function lowest($students){
         $min=INF;
         foreach ($students as $student) {
-            if ($student['grade'] > $min) {
+            if ($student['grade'] < $min) {
                 $min=$student['grade'];
             }
         }
@@ -134,7 +134,7 @@
         }
         echo "</table>";
         echo "<br>";
-        echo "Average Grade" . average($totalGrades,$total_students) . "<br>";
+        echo "Average Grade" . average($total_grades,$total_students) . "<br>";
         echo "Highest Grade" . highest($_SESSION['students']) . "<br>";
         echo "Lowest Grade" . lowest($_SESSION['students']) . "<br>";
     }

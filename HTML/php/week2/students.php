@@ -1,6 +1,5 @@
 <?php
-    session_unset();
-    session_destroy();
+
     session_start();
 
 
@@ -67,7 +66,7 @@
         ];
 
         $total_students++;
-        $totalGrades+=$student_grade;
+        $total_grades+=$student_grade;
 
         $_SESSION['total_students']=$total_students;
         $_SESSION['total_grades'] = $total_grades;
@@ -137,8 +136,8 @@
         echo "Average Grade " . average($total_grades,$total_students) . "<br>";
         echo "Highest Grade " . highest($_SESSION['students']) . "<br>";
         echo "Lowest Grade " . lowest($_SESSION['students']) . "<br>";
-        echo "Suma de grados" . "$total_grades" . "<br>";
-        echo "estudiantes" . $total_students . "<br>";
+        echo "Suma de grados " . "$total_grades" . "<br>";
+        echo "estudiantes " . $total_students . "<br>";
     }
 
     ?>

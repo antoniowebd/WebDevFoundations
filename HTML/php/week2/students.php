@@ -26,7 +26,7 @@
         <input type="text" id="name" name="name" required><br><br>
 
 
-        <label for="grade">Student Grade:</label>
+        <label for="grade">Student Grade (0-100):</label>
         <input type="number" id="grade" name="grade" min="0" max="100" required><br><br>
 
 
@@ -49,7 +49,7 @@
 
     // Counting total number of students and sum of grades
 
-    $total_students = isset($_SESSION['total_studernts']) ? $_SESSION['total_students'] :0;
+    $total_students = isset($_SESSION['total_students']) ? $_SESSION['total_students'] :0;
     $total_grades = isset($_SESSION['total_grades']) ? $_SESSION['total_grades'] :0;
 
     // Get data
@@ -117,6 +117,12 @@
         return $min;
     }
 
+    function sumar($students){
+        
+            $sum=array_sum(array_column($students,"grade"));
+            return $sum;
+    }
+
     // Display grades
 
     if (!empty($_SESSION['students'])) {
@@ -146,7 +152,7 @@
         echo "Average Grade " . average($total_grades,$total_students) . "<br>";
         echo "Highest Grade " . highest($_SESSION['students']) . "<br>";
         echo "Lowest Grade " . lowest($_SESSION['students']) . "<br>";
-        echo "Suma de grados " . "$total_grades" . "<br>";
+        echo "Suma de grados " . sumar($_SESSION['students']) . "<br>";
         echo "estudiantes " . $total_students . "<br>";
     }
 

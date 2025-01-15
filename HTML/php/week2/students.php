@@ -37,10 +37,21 @@
     <?php
 
     // Handle form submission
-// Initialize the students array in the session
+    // Initialize the students array in the session
     if (!isset($_SESSION['students'])) {
         $_SESSION['students'] = [];
     }
+
+    // Global variables
+    global $total_students;
+    global $total_sum;
+
+    // Counting total number of students and sum of grades
+
+    $total_students = isset($_SESSION['total_studernts']) ? $_SESSION['total_students'] :0;
+    $total_sum = isset($_SESSION['total_sum']) ? $_SESSION['total_sum'] :0;
+
+    // Get data
 
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         $name = htmlspecialchars($_POST['name']);
@@ -52,6 +63,12 @@
             'name' => $name,
             'grade' => $grade
         ];
+
+        $total_students++;
+        $total_sum+=$student_grade;
+
+        $_SESSION['total_students']=$total_students;
+        $_SESSION['total_sum'] = $total_sum;
     }
 
 
@@ -68,9 +85,56 @@
             echo "<td>{$student['grade']}</td>";
             echo "</tr>";
         }
-
-
         echo "</table>";
+    }
+
+    // Calculate average grade
+    function average($total_sum, $total_students) {
+        return $total_students > 0 ? $total_sum / $total_students :0;
+    }
+
+    // Calculate highest grade
+    function highest($students){
+        $max=-INF;
+        foreach ($students as $student) {
+            if ($student['grade'] > $max) {
+                $max=$student['grade'];
+            }
+        }
+        return $max;
+    }
+
+    // Calculate lowest grade
+
+    function lowest($students){
+        $min=INF;
+        foreach ($students as $student) {
+            if ($student['grade'] > $min) {
+                $min=$student['grade'];
+            }
+        }
+        return $min;
+    }
+
+    // Display grades
+
+    if (!empty($_SESSION['students'])) {
+        echo "<h2>Student Grades</h2>";
+        echo "<table border='1' cellpadding='10' cellspacing='0'>";
+        echo "<tr><th>Name</th><th>Grade</th></tr>";
+
+
+        foreach ($_SESSION['students'] as $student) {
+            echo "<tr>";
+            echo "<td>{$student['name']}</td>";
+            echo "<td>{$student['grade']}</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        echo "<br>";
+        echo "Average Grade" . average($total_sum,$total_students) . "<br>";
+        echo "Highest Grade" . highest($_SESSION['students']) . "<br>";
+        echo "Lowest Grade" . lowest(($_SESSION['students'])) . "<br>";
     }
     ?>
 </body>

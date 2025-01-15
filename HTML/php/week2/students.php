@@ -65,11 +65,11 @@
             'grade' => $grade
         ];
 
-        $total_students++;
+        /*$total_students++;
         $total_grades+=$student_grade;
 
         $_SESSION['total_students']=$total_students;
-        $_SESSION['total_grades'] = $total_grades;
+        $_SESSION['total_grades'] = $total_grades;*/
     }
 
 
@@ -130,10 +130,17 @@
             echo "<td>{$student['name']}</td>";
             echo "<td>{$student['grade']}</td>";
             echo "</tr>";
+
+
+            $total_students++;
+        $total_grades+=$student_grade;
+
+        $_SESSION['total_students']=$total_students;
+        $_SESSION['total_grades'] = $total_grades;
         }
         
-        $total_students++;
         
+
         echo "</table>";
         echo "<br>";
         echo "Average Grade " . average($total_grades,$total_students) . "<br>";

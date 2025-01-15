@@ -44,12 +44,12 @@
 
     // Global variables
     global $total_students;
-    global $total_sum;
+    global $totalGrades;
 
     // Counting total number of students and sum of grades
 
     $total_students = isset($_SESSION['total_studernts']) ? $_SESSION['total_students'] :0;
-    $total_sum = isset($_SESSION['total_sum']) ? $_SESSION['total_sum'] :0;
+    $total_grades = isset($_SESSION['totalGrades']) ? $_SESSION['totalGrades'] :0;
 
     // Get data
 
@@ -65,10 +65,10 @@
         ];
 
         $total_students++;
-        $total_sum+=$student_grade;
+        $totalGrades+=$student_grade;
 
         $_SESSION['total_students']=$total_students;
-        $_SESSION['total_sum'] = $total_sum;
+        $_SESSION['totalGrades'] = $total_Sum;
     }
 
 
@@ -89,8 +89,8 @@
     }
 
     // Calculate average grade
-    function average($total_sum, $total_students) {
-        return $total_students > 0 ? $total_sum / $total_students :0;
+    function average($totalGrades, $total_students) {
+        return $total_students > 0 ? $totalGrades / $total_students :0;
     }
 
     // Calculate highest grade
@@ -132,9 +132,9 @@
         }
         echo "</table>";
         echo "<br>";
-        echo "Average Grade" . average($total_sum,$total_students) . "<br>";
+        echo "Average Grade" . average($totalGrades,$total_students) . "<br>";
         echo "Highest Grade" . highest($_SESSION['students']) . "<br>";
-        echo "Lowest Grade" . lowest(($_SESSION['students'])) . "<br>";
+        echo "Lowest Grade" . lowest($_SESSION['students']) . "<br>";
     }
     ?>
 </body>

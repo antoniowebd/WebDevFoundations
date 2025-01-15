@@ -91,8 +91,8 @@
     }*/
 
     // Calculate average grade
-    function average($total_grades, $total_students) {
-        return $total_students > 0 ? $total_grades / $total_students :0;
+    function average($total_grades, $total_students): float|int {
+        return $total_students > 0 ? $total_grades / $total_students : 0;
     }
 
     // Calculate highest grade
@@ -134,9 +134,11 @@
         }
         echo "</table>";
         echo "<br>";
-        echo "Average Grade" . average($total_grades,$total_students) . "<br>";
-        echo "Highest Grade" . highest($_SESSION['students']) . "<br>";
-        echo "Lowest Grade" . lowest($_SESSION['students']) . "<br>";
+        echo "Average Grade " . average($total_grades,$total_students) . "<br>";
+        echo "Highest Grade " . highest($_SESSION['students']) . "<br>";
+        echo "Lowest Grade " . lowest($_SESSION['students']) . "<br>";
+        echo "Suma de grados" . "$total_grades" . "<br>";
+        echo "estudiantes" . $total_students . "<br>";
     }
 
     ?>

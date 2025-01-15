@@ -65,11 +65,11 @@
             'grade' => $grade
         ];
 
-        /*$total_students++;
-        $total_grades+=$student_grade;
+        $total_students++;
+        /*$total_grades+=$student_grade;*/
 
         $_SESSION['total_students']=$total_students;
-        $_SESSION['total_grades'] = $total_grades;*/
+       /* $_SESSION['total_grades'] = $total_grades;*/
     }
 
 
@@ -138,11 +138,11 @@
             echo "</tr>";
 
 
-            $total_students++;
-        $total_grades+=$student_grade;
+        //    $total_students++;
+        //$total_grades+=$student_grade;
 
-        $_SESSION['total_students']=$total_students;
-        $_SESSION['total_grades'] = $total_grades;
+        //$_SESSION['total_students']=$total_students;
+       // $_SESSION['total_grades'] = $total_grades;
         }
         
         

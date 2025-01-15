@@ -131,6 +131,9 @@
             echo "<td>{$student['grade']}</td>";
             echo "</tr>";
         }
+        
+        $total_students++;
+        
         echo "</table>";
         echo "<br>";
         echo "Average Grade " . average($total_grades,$total_students) . "<br>";

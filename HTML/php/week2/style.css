@@ -13,20 +13,12 @@ header {
     margin-bottom: 20px;
 }
 
-#superhero-display {
-    margin-top: 20px;
+#th{
+  background-color: darkslategrey;
 }
 
-#hero-name {
-    color: navy;
-    font-size: 36px;
-    font-weight: bold;
-}
-
-#hero-description {
-    font-size: 25px;
-    color: #04AA6D;
-    font-style: italic;
+#td{
+  background-color: darkgoldenrod;
 }
 
 .responsive {

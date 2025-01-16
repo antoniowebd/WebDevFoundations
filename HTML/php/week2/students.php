@@ -140,8 +140,7 @@ The method attribute of an HTML <form> element determines the HTTP method to be
             echo "<td>{$student['name']}</td>";
             echo "<td>{$student['grade']}</td>";
             echo "</tr>";
-            $_SESSION['total_students']=$total_students;
-            $_SESSION['total_grades']=$total_grades;
+           
 
         }
        

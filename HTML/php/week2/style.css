@@ -13,6 +13,11 @@ header {
     margin-bottom: 20px;
 }
 
+.centered-table{
+margin: 0 auto;
+text-align: center;
+}
+
 table th{
   background-color:darkgrey ;
 }

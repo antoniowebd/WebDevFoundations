@@ -1,8 +1,8 @@
 
 <?php
     session_start();
-    // Include the start() function at the very beginning of the file is important to have access to 
-    // related functions like $SESSION and to store user-specific data
+    /* Include the start() function at the very beginning of the file is important to have access to 
+     related functions like $SESSION and to store user-specific data*/
 ?>
 
 <!DOCTYPE html>

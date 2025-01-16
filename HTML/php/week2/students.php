@@ -1,9 +1,8 @@
+
 <?php
-
     session_start();
-
-
-
+    // Include the start() function at the very beginning of the file is important to have access to 
+    // related functions like $SESSION and to store user-specific data
 ?>
 
 <!DOCTYPE html>
@@ -11,12 +10,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Students Grades</title>
+    <title>Student Grade Manager</title>
     <link rel="stylesheet" href="style.css">
     
 </head>
 
-
+<!--Add FORM method 
+The method attribute of an HTML <form> element determines the HTTP method to be 
+    used when submitting form data to the server. There are two common methods: GET and POST
+-->
 <body>
     <h1>Enter Student Details</h1>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
@@ -64,37 +66,18 @@
             'name' => $name,
             'grade' => $grade
         ];
-
+        // The variable increment in 1 for each student stored in the array
         $total_students++;
-        /*$total_grades+=$student_grade;*/
-
         $_SESSION['total_students']=$total_students;
-       /* $_SESSION['total_grades'] = $total_grades;*/
+
     }
 
-
-    // Display the student data
-    /*if (!empty($_SESSION['students'])) {
-        echo "<h2>Student List</h2>";
-        echo "<table border='1' cellpadding='10' cellspacing='0'>";
-        echo "<tr><th>Name</th><th>Grade</th></tr>";
-
-
-        foreach ($_SESSION['students'] as $student) {
-            echo "<tr>";
-            echo "<td>{$student['name']}</td>";
-            echo "<td>{$student['grade']}</td>";
-            echo "</tr>";
-        }
-        echo "</table>";
-    }*/
-
-    // Calculate average grade
+    // Calculate average grade taking the sum of all the student's grades and divided by the number of students
     function average($total_grades, $total_students): float|int {
         return $total_students > 0 ? $total_grades / $total_students : 0;
     }
 
-    // Calculate highest grade
+    // Calculate highest grade using a loop
     function highest($students){
         $max=-INF;
         foreach ($students as $student) {
@@ -105,8 +88,7 @@
         return $max;
     }
 
-    // Calculate lowest grade
-
+    // Calculate lowest grade using a loop
     function lowest($students){
         $min=INF;
         foreach ($students as $student) {
@@ -116,14 +98,14 @@
         }
         return $min;
     }
-
+    // Calculate the sum of all the grades
     function sumar($students){
         
             $sum=array_sum(array_column($students,"grade"));
             return $sum;
     }
 
-    // Display grades
+    // Display grades using a table and a loop
 
     if (!empty($_SESSION['students'])) {
         echo "<h2>Student Grades</h2>";
@@ -137,25 +119,16 @@
             echo "<td>{$student['grade']}</td>";
             echo "</tr>";
 
-
-        //    $total_students++;
-        //$total_grades+=$student_grade;
-
-        //$_SESSION['total_students']=$total_students;
-       // $_SESSION['total_grades'] = $total_grades;
         }
-        
-        
-
+       
         echo "</table>";
         echo "<br>";
         echo "Average Grade " . round(sumar($_SESSION['students']) / $total_students,1) . "<br>";
         echo "Highest Grade " . highest($_SESSION['students']) . "<br>";
         echo "Lowest Grade " . lowest($_SESSION['students']) . "<br>";
-        //echo "Suma de grados " . sumar($_SESSION['students']) . "<br>";
-        //echo "estudiantes " . $total_students . "<br>";
-    }
 
+    }
     ?>
+
 </body>
 </html>

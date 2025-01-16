@@ -13,11 +13,11 @@ header {
     margin-bottom: 20px;
 }
 
-#th{
+table th{
   background-color: darkslategrey;
 }
 
-#td{
+table td{
   background-color: darkgoldenrod;
 }
 

@@ -7,16 +7,24 @@ or else it won't work when we upload it to a Dreamhost
   */
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Manager</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
 <body>
 
 <!-- Student Form -->
 <h2>Student Grades Management</h2>
 <!-- Set Form Action & Form Method -->
 <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-  Student Name: <input type="text" name="student_name">
-  Grade: <input type="text" name="student_grade">
-  <input type="submit" value="Add Student">
+  Student Name: <input type="text" name="student_name" required><br><br>
+  Grade: <input type="text" name="student_grade" required><br><br>
+  <input class="button button2"  type="submit" value="Add Student">
 </form>
 
 <!-- Handle Form Submission & Manage Data -->

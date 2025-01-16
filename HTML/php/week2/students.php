@@ -67,8 +67,8 @@ The method attribute of an HTML <form> element determines the HTTP method to be
             'grade' => $grade
         ];
         // The variable increment in 1 for each student stored in the array
-        $total_students++;
-        $_SESSION['total_students']=$total_students;
+       /* $total_students++;
+        $_SESSION['total_students']=$total_students;*/
 
     }
 

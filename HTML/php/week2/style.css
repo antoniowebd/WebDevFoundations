@@ -14,11 +14,11 @@ header {
 }
 
 table th{
-  background-color: darkslategrey;
+  background-color:darkgrey ;
 }
 
 table td{
-  background-color: darkgoldenrod;
+  background-color:beige;
 }
 
 .responsive {

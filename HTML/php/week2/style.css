@@ -18,6 +18,10 @@ margin:50%;
 text-align: center;
 }
 
+table tr{
+  align-self: auto;
+}
+
 table th{
   background-color:darkgrey ;
 }

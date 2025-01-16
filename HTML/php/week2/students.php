@@ -67,10 +67,10 @@ The method attribute of an HTML <form> element determines the HTTP method to be
             'grade' => $grade
         ];
         // The variable increment in 1 for each student stored in the array
-        $total_students++;
+        /*$total_students++;
         $total_grades+=$grade;
         $_SESSION['total_students']=$total_students;
-        $_SESSION['total_grades']=$total_grades;
+        $_SESSION['total_grades']=$total_grades;*/
 
     }
 
@@ -92,8 +92,8 @@ The method attribute of an HTML <form> element determines the HTTP method to be
     }*/
 
 
-?>
-<?php
+
+
     // Calculate average grade taking the sum of all the student's grades and divided by the number of students
     function average($total_grades, $total_students): float|int {
         return $total_students > 0 ? $total_grades / $total_students : 0;
@@ -149,7 +149,7 @@ The method attribute of an HTML <form> element determines the HTTP method to be
         echo "Average Grade " . round(sumar($_SESSION['students']) / $total_students,1) . "<br>";
         echo "Highest Grade " . highest($_SESSION['students']) . "<br>";
         echo "Lowest Grade " . lowest($_SESSION['students']) . "<br>";
-
+        echo "students " . $total_students . "<br>";
 
     }
     ?>

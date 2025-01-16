@@ -73,7 +73,8 @@ The method attribute of an HTML <form> element determines the HTTP method to be
         $_SESSION['total_grades']=$total_grades;
 
     }
-
+?>
+<?php
     // Calculate average grade taking the sum of all the student's grades and divided by the number of students
     function average($total_grades, $total_students): float|int {
         return $total_students > 0 ? $total_grades / $total_students : 0;

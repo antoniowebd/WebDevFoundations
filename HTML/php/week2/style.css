@@ -13,11 +13,6 @@ header {
     margin-bottom: 20px;
 }
 
-.centered-table{
-margin:50%;
-text-align: center;
-}
-
 table tr{
   align-self: auto;
 }

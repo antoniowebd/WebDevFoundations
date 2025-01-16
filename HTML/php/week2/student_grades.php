@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 function displayStudents($students) {
     echo "<h3>Student List:</h3>";
-    echo "<table class='centered-table' border='1' cellpadding='10'><tr><th>Name</th><th>Grade</th></tr>";
+    echo "<table border='1'><tr><th>Name</th><th>Grade</th></tr>";
     foreach ($students as $student) {
         echo "<tr><td>" . $student['name'] . "</td><td>" . $student['grade'] . "</td></tr>";
     }

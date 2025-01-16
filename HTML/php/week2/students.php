@@ -42,7 +42,7 @@ The method attribute of an HTML <form> element determines the HTTP method to be
     // Handle form submission
     // Initialize the students array in the session
     if (!isset($_SESSION['students'])) {
-        $_SESSION['students'] = [];
+        $_SESSION['students'] = array();
     }
 
     // Global variables
@@ -68,11 +68,30 @@ The method attribute of an HTML <form> element determines the HTTP method to be
         ];
         // The variable increment in 1 for each student stored in the array
         $total_students++;
-        $total_grades+=$student_grade;
+        $total_grades+=$grade;
         $_SESSION['total_students']=$total_students;
         $_SESSION['total_grades']=$total_grades;
 
     }
+
+    /*if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $student_name = $_POST['student_name'];
+        $student_grade = $_POST['student_grade'];
+        
+        if (!empty($student_name) && is_numeric($student_grade)) {
+            $_SESSION['students'][] = array("name" => $student_name, "grade" => $student_grade);
+            
+            $total_students++;
+            $total_sum += $student_grade;
+    
+            $_SESSION['total_students'] = $total_students;
+            $_SESSION['total_sum'] = $total_sum;
+        } else {
+            echo "Please enter a valid name and numeric grade.";
+        }
+    }*/
+
+
 ?>
 <?php
     // Calculate average grade taking the sum of all the student's grades and divided by the number of students

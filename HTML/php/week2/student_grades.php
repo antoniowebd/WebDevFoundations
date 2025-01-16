@@ -17,9 +17,12 @@ or else it won't work when we upload it to a Dreamhost
 </head>
 
 <body>
+<header>
+        <h1>Student Grades Management</h1>
+</header>
 
 <!-- Student Form -->
-<h2>Student Grades Management</h2>
+<!--<h2>Student Grades Management</h2>-->
 <!-- Set Form Action & Form Method -->
 <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
   Student Name: <input type="text" name="student_name" required><br><br>

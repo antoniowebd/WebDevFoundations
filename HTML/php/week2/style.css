@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    text-align:justify;
+    text-align:center;
     padding: 20px;
 }
 
@@ -13,8 +13,13 @@ header {
     margin-bottom: 20px;
 }
 
+table{
+  align-self: center;
+}
+
 table tr{
-  align-self: auto;
+  
+  align-self:center;
   
 }
 

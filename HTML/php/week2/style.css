@@ -29,6 +29,7 @@ table td{
 
 .result {
   color: brown;
+  display:inline-block;
 }
 
 .responsive {

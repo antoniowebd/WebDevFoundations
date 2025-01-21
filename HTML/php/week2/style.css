@@ -27,6 +27,16 @@ table td{
   color: #f4f4f4;
 }
 
+.prom{
+  color:#04AA6D;
+  display:inline-block;
+}
+
+.top{
+  color:navy;
+  display: inline-block;
+}
+
 .result {
   color: brown;
   display:inline-block;

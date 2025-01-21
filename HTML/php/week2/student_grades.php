@@ -118,9 +118,9 @@ function findLowestGrade($students) {
 if (!empty($_SESSION['students'])) {
     displayStudents($_SESSION['students']);
     echo "<h3>Statistics:</h3>";
-    echo "Average Grade: " . round(calculateAverage($total_sum, $total_students),1) . "<br>";
-    echo "Highest Grade: " . findHighestGrade($_SESSION['students']) . "<br>";
-    echo '<div class="result";> Lowest Grade: </div>' . " " . findLowestGrade($_SESSION['students']) . "<br>";
+    echo '<div class="prom";> Average Grade: </div>' . " " . round(calculateAverage($total_sum, $total_students),1) . "<br>";
+    echo '<div class="top";> Highest Grade: </div>' . " " . findHighestGrade($_SESSION['students']) . "<br>";
+    echo '<div class="bottom";> Lowest Grade: </div>' . " " . findLowestGrade($_SESSION['students']) . "<br>";
 }
 ?>
 

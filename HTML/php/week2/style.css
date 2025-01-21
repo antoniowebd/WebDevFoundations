@@ -27,7 +27,9 @@ table td{
   color: #f4f4f4;
 }
 
-
+.result {
+  color: brown;
+}
 
 .responsive {
     max-width: 100%;

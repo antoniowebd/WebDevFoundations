@@ -42,7 +42,6 @@ if (!isset($_SESSION['students'])) {
 
 global $total_students;
 global $total_sum;
-global $low;
 
 // Track total number of students & sum of grades
 
@@ -121,8 +120,7 @@ if (!empty($_SESSION['students'])) {
     echo "<h3>Statistics:</h3>";
     echo "Average Grade: " . round(calculateAverage($total_sum, $total_students),1) . "<br>";
     echo "Highest Grade: " . findHighestGrade($_SESSION['students']) . "<br>";
-    $low=findLowestGrade($_SESSION['students']);
-    echo '<div class="result";> Lowest Grade: </div>' . $low   . "<br>";
+    echo '<div class="result";> Lowest Grade: </div>' . findLowestGrade($_SESSION['students']) . "<br>";
 }
 ?>
 

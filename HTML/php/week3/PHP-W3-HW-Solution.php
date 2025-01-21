@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Week 3 Homework: Survey Form Design</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="week3.css">
 </head>
 <body>
     <h1>Survey Form</h1>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Week 3 Homework: Survey Form Design</title>
-    <link rel="stylesheet" href="week3.css">
+    <link rel="stylesheet" href="survey.css">
 </head>
 <body>
     <h1>Survey Form</h1>
@@ -59,7 +59,7 @@
 <!-- Update Form Action & Form Method -->
 <!-- Update to Display Errors & Success Messages -->
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-        
+
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" value="<?php echo $name;?>" required>
         <span class="error"><?php echo $nameErr;?></span><br><br>

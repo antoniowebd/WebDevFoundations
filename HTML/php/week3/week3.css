@@ -77,3 +77,7 @@ strong {
   .area:hover{
     background-color: darkgoldenrod;
   }
+
+  .radio-group{
+    background-color: darkslategray;
+  }

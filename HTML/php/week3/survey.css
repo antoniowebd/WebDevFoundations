@@ -1,6 +1,7 @@
-/*body{
+body{
     background-color: darkgray;    
-}*/
+    align-items: center;
+}
 
 strong { 
     color: red;

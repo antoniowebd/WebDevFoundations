@@ -79,7 +79,9 @@ strong {
   }
 
   .radio-group{
+    margin: 20px;
     padding: 30px;
     max-width: max-content;
-    background-color: rgb(34, 28, 97);
+    background-color:darkcyan;
+    color: white;
   }

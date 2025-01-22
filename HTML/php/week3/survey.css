@@ -1,6 +1,8 @@
 body{
-    background-color: darkgray;    
+    background-color:lightgray;    
     align-items: center;
+    text-align: center;
+
 }
 
 strong { 
@@ -85,4 +87,6 @@ strong {
     max-width: max-content;
     background-color:darkcyan;
     color: white;
+    text-align: center;
+    align-content: center;
   }

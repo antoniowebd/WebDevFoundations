@@ -50,7 +50,7 @@ strong {
   }
 
   .button {
-    background-color: black; /* Green */
+    /*background-color: black;  Green */
     border: none;
     color: white;
     padding: 16px 32px;
@@ -63,9 +63,9 @@ strong {
   }
 
   .button2 {
-    background-color:darkcyan; 
+    background-color:black; 
     color: white;     
-    box-shadow: 3px 3px 5px lightblue;
+    box-shadow: 3px 3px 5px gray;
   }
 
   .button2:hover {

@@ -72,7 +72,7 @@
         <input type="number" id="age" name="age" value="<?php echo $age;?>" required>
         <span class="error"><?php echo $ageErr;?></span><br><br>
 
-        <h2>Gender:</h2>
+        <h3>Gender:</h3>
         <fieldset class="camp">
         <div class="radio-group">
             <input type="radio" id="male" name="gender" value="male" <?php if (isset($gender) && $gender=="male") echo "checked";?>>

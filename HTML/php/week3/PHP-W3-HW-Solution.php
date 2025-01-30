@@ -115,10 +115,10 @@
     </form>
     
 <!-- Add Form Response -->
-
+<pre>
     <div class="success" id="form-response">
-        <?php echo $formErr;?>
+        <?php echo "<strong> $formErr; </strong>"?>
     </div>
-
+    </pre>
 </body>
 </html>

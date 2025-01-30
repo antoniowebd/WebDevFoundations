@@ -87,5 +87,6 @@ strong {
     /*max-width: max-content;*/
     background-color:darkcyan;
     color: white;
+    min-width: 40%;
     /*align-items: center;*/
   }

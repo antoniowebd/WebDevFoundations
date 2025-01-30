@@ -87,6 +87,11 @@ strong {
     /*max-width: max-content;*/
     background-color:darkcyan;
     color: white;
-    align-items: left;
-    text-align: left;
+    align-items:center ;
+    /*text-align: left;*/
+  }
+
+  .camp{
+    margin-left: 35%;
+    margin-right: 35%;
   }

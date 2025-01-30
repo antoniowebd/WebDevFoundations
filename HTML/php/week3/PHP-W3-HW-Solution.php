@@ -73,7 +73,7 @@
         <span class="error"><?php echo $ageErr;?></span><br><br>
 
         <label>Gender:</label>
-        <fieldset style="align-items: center; margin-left:100px">
+        <fieldset style="margin-left:40%;">
         <div class="radio-group">
             <input type="radio" id="male" name="gender" value="male" <?php if (isset($gender) && $gender=="male") echo "checked";?>>
             <label for="male">Male</label>

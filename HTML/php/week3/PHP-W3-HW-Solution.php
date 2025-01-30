@@ -85,7 +85,7 @@
 
         <label for="interests">Interests:</label>
         <div class="radio-group">
-            <input type="checkbox" id="sports" name="interests[]" value="sports" <?php if (in_array("sports", $interests)) echo "checked";?>>
+            <input type="checkbox" id="sports" name="interests[]" value="sports" style="align-self: center;" <?php if (in_array("sports", $interests)) echo "checked";?>>
             <label for="sports">Sports</label>
             <input type="checkbox" id="music" name="interests[]" value="music" <?php if (in_array("music", $interests)) echo "checked";?>>
             <label for="music">Music</label>

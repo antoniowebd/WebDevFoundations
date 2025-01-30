@@ -73,6 +73,7 @@
         <span class="error"><?php echo $ageErr;?></span><br><br>
 
         <label>Gender:</label>
+        <fieldset style="align-items: center;">
         <div class="radio-group">
             <input type="radio" id="male" name="gender" value="male" <?php if (isset($gender) && $gender=="male") echo "checked";?>>
             <label for="male">Male</label>
@@ -81,11 +82,12 @@
             <input type="radio" id="other" name="gender" value="other" <?php if (isset($gender) && $gender=="other") echo "checked";?>>
             <label for="other">Other</label>
         </div>
+        </fieldset>
         <span class="error"><?php echo $genderErr;?></span><br><br>
 
         <label for="interests">Interests:</label>
         <div class="radio-group">
-            <input type="checkbox" id="sports" name="interests[]" value="sports" style="align-self: center;" <?php if (in_array("sports", $interests)) echo "checked";?>>
+            <input type="checkbox" id="sports" name="interests[]" value="sports" <?php if (in_array("sports", $interests)) echo "checked";?>>
             <label for="sports">Sports</label>
             <input type="checkbox" id="music" name="interests[]" value="music" <?php if (in_array("music", $interests)) echo "checked";?>>
             <label for="music">Music</label>

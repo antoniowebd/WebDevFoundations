@@ -82,11 +82,16 @@ strong {
   }
 
   .radio-group{
-    margin: 20px;
-    padding: 30px;
+    /*margin: 20px;
+    padding: 30px;*/
     max-width: max-content;
     background-color:darkcyan;
     color: white;
-    text-align: center;
-    align-items: center;
+    /*text-align: center;
+    align-items: center;*/
+  }
+
+  .genero{
+    margin-left: 45%;
+    margin-right: 45%;
   }

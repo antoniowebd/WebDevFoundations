@@ -84,8 +84,8 @@ strong {
   .radio-group{
     /*margin: 20px;*/
     padding: 20px;
-    max-width: max-content;
+    /*max-width: max-content;*/
     background-color:darkcyan;
     color: white;
-    align-items: center;
+    /*align-items: center;*/
   }

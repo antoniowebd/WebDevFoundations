@@ -86,7 +86,7 @@
         <span class="error"><?php echo $genderErr;?></span><br><br>
 
         <label for="interests">Interests:</label>
-        <fieldset style="margin-left:35%; margin-right:35%;">
+        <fieldset style="margin-left:40%; margin-right:40%;">
         <div class="radio-group">
             <input type="checkbox" id="sports" name="interests[]" value="sports" <?php if (in_array("sports", $interests)) echo "checked";?>>
             <label for="sports">Sports</label>

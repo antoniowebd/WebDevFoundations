@@ -116,7 +116,7 @@
     </main>
 <!-- Add Form Response -->
  <footer>
-    <div id="form-response">
+    <div style="align-items: last baseline;" id="form-response">
         <?php echo $formErr;?>
     </div>
 </footer>

@@ -106,7 +106,7 @@
         <label for="comments">Comments:</label><br>
         <textarea id="comments" name="comments" rows="4"><?php echo $comments;?></textarea><br><br>
 
-        <input type="submit" value="Submit">
+        <input class="button button2" type="submit" value="Submit">
     </form>
 
 <!-- Add Form Response -->

@@ -8,6 +8,7 @@
     <header>
         <h1>Survey Form</h1>
     </header>
+    <main>
     <!-- Add PHP Form Validation -->
     <?php
     // Declare Variables
@@ -112,7 +113,7 @@
 
         <input class="button button2" type="submit" value="Submit">
     </form>
-
+    </main>
 <!-- Add Form Response -->
  <footer>
     <div id="form-response">

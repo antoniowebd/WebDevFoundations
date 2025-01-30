@@ -41,7 +41,7 @@
         }
 
         if (empty($nameErr) && empty($emailErr) && empty($ageErr) && empty($genderErr)) {
-            echo "<strong><p>Thank you for your submission!</p></strong>";
+            echo "<strong><h3>Thank you for your submission!</h3></strong>";
             $name = $email = $age = $gender = $country = $comments = "";
             $interests = array();
         } else {

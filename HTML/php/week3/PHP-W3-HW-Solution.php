@@ -41,7 +41,7 @@
         }
 
         if (empty($nameErr) && empty($emailErr) && empty($ageErr) && empty($genderErr)) {
-            echo "<p>Thank you for your submission!</p>";
+            echo "<strong><p>Thank you for your submission!</p></strong>";
             $name = $email = $age = $gender = $country = $comments = "";
             $interests = array();
         } else {
@@ -115,10 +115,10 @@
     </form>
     
 <!-- Add Form Response -->
-<pre>
-    <div class="success" id="form-response">
-        <?php echo "<strong> $formErr; </strong>"?>
+
+    <div id="form-response">
+        <?php echo $formErr; ?>
     </div>
-    </pre>
+
 </body>
 </html>

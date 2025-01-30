@@ -5,7 +5,9 @@
     <link rel="stylesheet" href="survey.css">
 </head>
 <body>
-    <h1>Survey Form</h1>
+    <header>
+        <h1>Survey Form</h1>
+    </header>
     <!-- Add PHP Form Validation -->
     <?php
     // Declare Variables

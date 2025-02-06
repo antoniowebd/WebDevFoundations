@@ -11,7 +11,7 @@
    if(!isset($_COOKIE[$cookie_name])) {
        echo "Cookie named '" . $cookie_name . "' is not set!";
    } else {
-       echo "Cookie '" . $cookie_name . "' is set!<br>";
+       echo "<strong>Cookie '</strong>" . $cookie_name . "<strong>' is set!</strong><br>";
        echo "<strong>Value is: </strong>" . $_COOKIE[$cookie_name];
    }
    ?>

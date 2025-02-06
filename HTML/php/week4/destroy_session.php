@@ -1,0 +1,1 @@
+echo "<strong>Username is </strong>" . $_SESSION[""] . "<br>";

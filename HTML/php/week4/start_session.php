@@ -7,8 +7,8 @@ session_start()
 <body>
     <?php
     //Set session variables
-    $_SESSION["username"] = " ";
-    $_SESSION["email"] = " ";
+    $_SESSION["username"] = "Antonio Acatecatl";
+    $_SESSION["email"] = "antonioa@slcc.edu";
     echo "<strong>Session variables 'username' and 'email' are set.</strong>";
     ?>
 </body>

@@ -9,7 +9,7 @@ session_start()
     //Set session variables
     $_SESSION["username"] = " ";
     $_SESSION["email"] = " ";
-    echo "<strong>Session variables are set.</strong>";
+    echo "<strong>Session variables username and email are set.</strong>";
     ?>
 </body>
 </html>

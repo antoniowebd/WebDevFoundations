@@ -9,7 +9,7 @@
    <body>
    
    <?php
-   echo "<strong>Cookie 'user' is set.</strong><br>";
+   
    //!isset verify that the variable in not NULL
    //$_COOKIE is a global variable
    if(!isset($_COOKIE[$cookie_name])) {

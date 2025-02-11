@@ -20,7 +20,7 @@ try{
 
     //Let's create a table to store some cool data
     $createTable = "
-        CREATE TABLE IF NOT EXISTS cool_products (
+        CREATE TABLE IF NOT EXISTS ant_cool_products (
             id INT AUTO_INCREMENT PRIMARY KEY,
             name VARCHAR(100) NOT NULL,
             price DECIMAL (10,2),
@@ -32,7 +32,7 @@ try{
 
     //Let's add some fun cool products
     $insertProduct = "
-        INSERT INTO cool_products (name, price, awesomeness_level)
+        INSERT INTO ant_cool_products (name, price, awesomeness_level)
         VALUES ('Laser Sword', 100.00, 10),
                ('Hoverboard', 500.00, 8),
                ('Jetpack', 1000.00, 9),
@@ -45,7 +45,7 @@ try{
     echo "Added a Cool Product with ID: $lastId<br>";
 
     //Let's get all the cool products
-    $results = $pdo->query("SELECT * FROM cool_products");
+    $results = $pdo->query("SELECT * FROM ant_cool_products");
 
     //Show everything we found
     echo "<br> Here's what's in ouur store: <br>";

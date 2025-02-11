@@ -44,5 +44,5 @@ try {
     };
 
 } catch (PDOException $e) {
-    echo "Conncetion failed: " . $e->getMessage();
+    echo "Connection failed: " . $e->getMessage();
 }

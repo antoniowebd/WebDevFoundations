@@ -84,8 +84,10 @@
         INSERT INTO responses (name, email, age, gender, country, comments, interests)
         VALUES ($name, $email, $age, $gender, $country, $comments, $string)";
               
-    
-   // $pdo->exec($insertProduct);
+    $pdo->query("INSERT INTO responses (name, email, age, gender, country, comments, interests) VALUES ($name, $email, $age, $gender, $country, $comments, $string)"
+       );
+       
+    //$pdo->exec($insertProduct);
 } else {
     $formErr = "Please fill in all required fields correctly.";
 }
@@ -103,7 +105,7 @@
      $results = $pdo->query("SELECT * FROM responses");
 
      //Show everything we found
-     echo "<br> Here's what's in ouur store: <br>";
+     echo "<br> Here's what's in our store: <br>";
      while($row = $results->fetch(PDO::FETCH_ASSOC)){
          echo "ID: " . $row['id'] .  
              " | Name: " . $row['name'] . 

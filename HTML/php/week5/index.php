@@ -81,13 +81,10 @@
     //insert
     $string=implode(", ", $interests);
     $insertProduct = "
-        INSERT INTO responses (name, email, age, gender, country, comments, interests)
-        VALUES ($name, $email, $age, $gender, $country, $comments, $string)";
+        INSERT INTO responses (name, email, age, gender, country)
+        VALUES ($name, $email, $age, $gender, $country)";
               
-    $pdo->query("INSERT INTO responses (name, email, age, gender, country, comments, interests) VALUES ($name, $email, $age, $gender, $country, $comments, $string)"
-       );
-       
-    //$pdo->exec($insertProduct);
+    $pdo->exec($insertProduct);
 } else {
     $formErr = "Please fill in all required fields correctly.";
 }

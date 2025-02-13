@@ -85,6 +85,9 @@
               
     
     $pdo->exec($insertProduct);
+} else {
+    $formErr = "Please fill in all required fields correctly.";
+}
 
 
     // Sanatization Function

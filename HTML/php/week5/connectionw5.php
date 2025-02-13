@@ -2,7 +2,7 @@
 
 try {
     //DB configuration
-    $dsn = "mysql:host=php-mysql-exercisedb.slccwebdev.com; dbname=php-mysql-exercisedb";
+    $dsn = "mysql:host=php-mysql-exercisedb.slccwebdev.com; dbname=php_mysql_exercisedb";
     $username="phpmysqlexercise";
     $password="mysqlexercise";
     //PDO connection

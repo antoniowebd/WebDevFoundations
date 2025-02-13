@@ -85,7 +85,7 @@
         VALUES ($name, $email, $age, $gender, $country, $comments, $string)";
               
     
-    $pdo->exec($insertProduct);
+   // $pdo->exec($insertProduct);
 } else {
     $formErr = "Please fill in all required fields correctly.";
 }

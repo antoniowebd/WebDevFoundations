@@ -79,9 +79,10 @@
     }*/
 
     //insert
+    $string=implode(", ", $interests);
     $insertProduct = "
         INSERT INTO responses (name, email, age, gender, country, comments, interests)
-        VALUES ($name, $email, $age, $gender, $country, $comments, $interests)";
+        VALUES ($name, $email, $age, $gender, $country, $comments, $string)";
               
     
     $pdo->exec($insertProduct);

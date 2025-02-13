@@ -99,7 +99,7 @@
     }
 
      //Let's get all the cool products
-     $results = $pdo->query("SELECT * FROM ant_cool_products");
+     $results = $pdo->query("SELECT * FROM responses");
 
      //Show everything we found
      echo "<br> Here's what's in ouur store: <br>";
@@ -171,7 +171,7 @@
         <?php echo $formErr;?>
     </div>
 
-    <!-- Display Table of Submitted Responses -->
+    <!-- Display Table of Submitted Responses 
 
      <h2>Submitted Responses</h2>
     <table border="1">
@@ -184,7 +184,7 @@
             <th>Country</th>
             <th>Comments</th>
         </tr>
-        <?php
+        
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 echo "<tr>
@@ -202,6 +202,6 @@
         }
         $conn->close();
         ?>
-    </table>
+    </table>-->
 </body>
 </html>

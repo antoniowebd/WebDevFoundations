@@ -7,7 +7,7 @@ try {
     $password="mysqlexercise";
     //PDO connection
     $pdo= new PDO($dsn,$username,$password);
-    $pdo→setAttrribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected Successfully";
 } 
 catch(PDOException $e){

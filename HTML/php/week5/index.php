@@ -82,7 +82,7 @@
     $string=implode(", ", $interests);
     $insertProduct = "
         INSERT INTO responses (name, email, age, gender, country)
-        VALUES ($name, $email, $age, $gender, $country)";
+        VALUES (Israel, israel@slcc.edu, 20, Male, Mexico)";
               
     $pdo->exec($insertProduct);
 } else {

@@ -98,9 +98,17 @@
         return $data;
     }
 
-    // Fetch data from database
-    $sql = "SELECT * FROM responses";
-    $result = $conn->query($sql);
+     //Let's get all the cool products
+     $results = $pdo->query("SELECT * FROM ant_cool_products");
+
+     //Show everything we found
+     echo "<br> Here's what's in ouur store: <br>";
+     while($row = $results->fetch(PDO::FETCH_ASSOC)){
+         echo "ID: " . $row['id'] .  
+             " | Name: " . $row['name'] . 
+             " | Price: " . $row['price'] . 
+             " | Awesomeness Level: " . $row['awesomeness_level'] . "<br>";
+     }
     ?>
 
 <!-- Survey Form -->

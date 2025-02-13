@@ -10,17 +10,24 @@
     <?php
 
     // Database connection
-    $servername = "php-mysql-exercisedb.slccwebdev.com";
-    $username = "phpmysqlexercise"; // Update with your database username
-    $password = "mysqlexercise"; // Update with your database password
-    $dbname = "survey_r";
+    //$servername = "php-mysql-exercisedb.slccwebdev.com";
+    //$username = "phpmysqlexercise"; // Update with your database username
+    //$password = "mysqlexercise"; // Update with your database password
+    //$dbname = "php_mysql_exercisedb";
 
     // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+    try {
+        //DB configuration
+        $dsn = "mysql:host=php-mysql-exercisedb.slccwebdev.com; dbname=php_mysql_exercisedb";
+        $username="phpmysqlexercise";
+        $password="mysqlexercise";
+        //PDO connection
+        $pdo= new PDO($dsn,$username,$password);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "Connected Successfully";
+    } 
+    catch(PDOException $e){
+        echo "Connection failed: " . $e->getMessage();
     }
 
     // PHP Form Validation
@@ -52,7 +59,7 @@
         if (empty($gender)) {
             $genderErr = "Gender is required";
         }
-    // Update Statement to insert data into database
+    /* Update Statement to insert data into database
             if (empty($nameErr) && empty($emailErr) && empty($ageErr) && empty($genderErr)) {
             $stmt = $conn->prepare("INSERT INTO responses (name, email, age, gender, interests, country, comments) VALUES (?, ?, ?, ?, ?, ?, ?)");
             $stmt->bind_param("ssissss", $name, $email, $age, $gender, $interests, $country, $comments);
@@ -69,7 +76,15 @@
         } else {
             $formErr = "Please fill in all required fields correctly.";
         }
-    }
+    }*/
+
+    //insert
+    $insertProduct = "
+        INSERT INTO responses (name, email, age, gender, country, comments, interests)
+        VALUES ($name, $email, $age, $gender, $country, $comments, $interests)";
+              
+    
+    $pdo->exec($insertProduct);
 
 
     // Sanatization Function

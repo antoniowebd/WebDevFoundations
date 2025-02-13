@@ -106,8 +106,12 @@
      while($row = $results->fetch(PDO::FETCH_ASSOC)){
          echo "ID: " . $row['id'] .  
              " | Name: " . $row['name'] . 
-             " | Price: " . $row['price'] . 
-             " | Awesomeness Level: " . $row['awesomeness_level'] . "<br>";
+             " | Email: " . $row['email'] . 
+             " | Age: " . $row['age'] . 
+             " | Gender: " . $row['gender'] . 
+             " | Country: " . $row['country'] . 
+             " | Comments: " . $row['comments'] . 
+             " | Interests: " . $row['interests'] . "<br>";
      }
     ?>
 

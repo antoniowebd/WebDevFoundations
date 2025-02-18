@@ -57,11 +57,11 @@
 
     //insert
     $string=implode(", ", $interests);
-   // $insertProduct = "
-   //     INSERT INTO responses (name, email, age, gender, country)
-   //     VALUES (Israel, israel@slcc.edu, 20, Male, Mexico)";
+    $insertProduct = "
+        INSERT INTO responses (name, email, age, gender, country)
+        VALUES ($name, $email, $age, $gender, $country)";
               
-   // $pdo->exec($insertProduct);
+    $pdo->exec($insertProduct);
 } else {
     $formErr = "Please fill in all required fields correctly.";
 }

@@ -79,7 +79,7 @@
         $data = htmlspecialchars($data);
         return $data;
     }
-
+/*
      //Let's get all the cool products
      $results = $pdo->query("SELECT * FROM responses");
 
@@ -94,7 +94,7 @@
              " | Country: " . $row['country'] . 
              " | Comments: " . $row['comments'] . 
              " | Interests: " . $row['interests'] . "<br>";
-     }
+     }*/
     ?>
 
 <!-- Survey Form -->
@@ -155,7 +155,7 @@
     <!-- Display Table of Submitted Responses -->
 
     <h2>Submitted Responses</h2>
-    <table>
+    <table border="1">
         <tr>
             <th>Name</th>
             <th>Email</th>

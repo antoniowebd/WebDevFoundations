@@ -9,12 +9,6 @@
     <!-- Add Database Connection -->
     <?php
 
-    // Database connection
-    //$servername = "php-mysql-exercisedb.slccwebdev.com";
-    //$username = "phpmysqlexercise"; // Update with your database username
-    //$password = "mysqlexercise"; // Update with your database password
-    //$dbname = "php_mysql_exercisedb";
-
     // Create connection
     try {
         //DB configuration
@@ -59,24 +53,7 @@
         if (empty($gender)) {
             $genderErr = "Gender is required";
         }
-    /* Update Statement to insert data into database
-            if (empty($nameErr) && empty($emailErr) && empty($ageErr) && empty($genderErr)) {
-            $stmt = $conn->prepare("INSERT INTO responses (name, email, age, gender, interests, country, comments) VALUES (?, ?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param("ssissss", $name, $email, $age, $gender, $interests, $country, $comments);
-            
-            if ($stmt->execute()) {
-                echo "<p>Thank you for your submission!</p>";
-                $name = $email = $age = $gender = $country = $comments = "";
-                $interests = array();
-            } else {
-                echo "Error: " . $stmt->error;
-            }
-
-            $stmt->close();
-        } else {
-            $formErr = "Please fill in all required fields correctly.";
-        }
-    }*/
+    
 
     //insert
     $string=implode(", ", $interests);
@@ -171,37 +148,6 @@
         <?php echo $formErr;?>
     </div>
 
-    <!-- Display Table of Submitted Responses 
-
-     <h2>Submitted Responses</h2>
-    <table border="1">
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Interests</th>
-            <th>Country</th>
-            <th>Comments</th>
-        </tr>
-        
-        if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
-                echo "<tr>
-                        <td>" . $row["name"] . "</td>
-                        <td>" . $row["email"] . "</td>
-                        <td>" . $row["age"] . "</td>
-                        <td>" . $row["gender"] . "</td>
-                        <td>" . $row["interests"] . "</td>
-                        <td>" . $row["country"] . "</td>
-                        <td>" . $row["comments"] . "</td>
-                      </tr>";
-            }
-        } else {
-            echo "<tr><td colspan='7'>No responses yet</td></tr>";
-        }
-        $conn->close();
-        ?>
-    </table>-->
+   
 </body>
 </html>

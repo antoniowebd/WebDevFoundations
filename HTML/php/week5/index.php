@@ -8,13 +8,18 @@
     <h1>Survey Form</h1>
     <!-- Add Database Connection -->
     <?php
+    //Secret connecction details
+    $host = 'php-mysql-exercisedb.slccwebdev.com'; //Where out database is located
+    $dbname = 'php_mysql_exercisedb'; //Name of our database
+    $username = 'phpmysqlexercise'; //Username to access the database
+    $password = 'mysqlexercise'; //Password to access the database
 
     // Create connection
     try {
         //DB configuration
-        $dsn = "mysql:host=php-mysql-exercisedb.slccwebdev.com; dbname=php_mysql_exercisedb";
-        $username="phpmysqlexercise";
-        $password="mysqlexercise";
+        $dsn = "mysql:host=$host; dbname=$dbname";
+    //    $username="phpmysqlexercise";
+    //    $password="mysqlexercise";
         //PDO connection
         $pdo= new PDO($dsn,$username,$password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -23,7 +23,7 @@
         //PDO connection
         $pdo= new PDO($dsn,$username,$password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Connected Successfully";
+        echo "Connected Successfully" . "<br";
     } 
     catch(PDOException $e){
         echo "Connection failed: " . $e->getMessage();
@@ -84,7 +84,7 @@
      $results = $pdo->query("SELECT * FROM responses");
 
      //Show everything we found
-     echo "<br> Here's what's in our store: <br>";
+     echo "<br> Here's the data contained in the table Responses: <br>";
      while($row = $results->fetch(PDO::FETCH_ASSOC)){
          echo "ID: " . $row['id'] .  
              " | Name: " . $row['name'] . 

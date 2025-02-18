@@ -154,7 +154,7 @@
      //Let's get all the cool products
      $results = $pdo->query("SELECT * FROM responses");        
          //Show everything we found
-     echo "<br> Here's the data contained in the table Responses: <br>";
+     echo "Here's the data contained in the table Responses:" . "<br>";
      while($row = $results->fetch(PDO::FETCH_ASSOC)){
         echo "<tr>
         <td>" . $row["name"] . "</td>

@@ -145,7 +145,7 @@
     <!-- Display Table of Submitted Responses -->
 
      <h2>Submitted Responses</h2>
-    <table>
+    <table border="1">
         <tr>
             <th>Name</th>
             <th>Email</th>

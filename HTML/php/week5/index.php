@@ -79,22 +79,7 @@
         $data = htmlspecialchars($data);
         return $data;
     }
-/*
-     //Let's get all the cool products
-     $results = $pdo->query("SELECT * FROM responses");
 
-     //Show everything we found
-     echo "<br>" . "Here's the data contained in the table Responses:" . "<br>";
-     while($row = $results->fetch(PDO::FETCH_ASSOC)){
-         echo "ID: " . $row['id'] .  
-             " | Name: " . $row['name'] . 
-             " | Email: " . $row['email'] . 
-             " | Age: " . $row['age'] . 
-             " | Gender: " . $row['gender'] . 
-             " | Country: " . $row['country'] . 
-             " | Comments: " . $row['comments'] . 
-             " | Interests: " . $row['interests'] . "<br>";
-     }*/
     ?>
 
 <!-- Survey Form -->

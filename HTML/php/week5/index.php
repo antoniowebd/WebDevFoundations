@@ -84,7 +84,7 @@
      $results = $pdo->query("SELECT * FROM responses");
 
      //Show everything we found
-     echo "<br> Here's the data contained in the table Responses: <br>";
+     echo "<br>" . "Here's the data contained in the table Responses:" . "<br>";
      while($row = $results->fetch(PDO::FETCH_ASSOC)){
          echo "ID: " . $row['id'] .  
              " | Name: " . $row['name'] . 
@@ -166,6 +166,8 @@
             <th>Comments</th>
         </tr>
         <?php
+     //Let's get all the cool products
+     $results = $pdo->query("SELECT * FROM responses");        
          //Show everything we found
      echo "<br> Here's the data contained in the table Responses: <br>";
      while($row = $results->fetch(PDO::FETCH_ASSOC)){

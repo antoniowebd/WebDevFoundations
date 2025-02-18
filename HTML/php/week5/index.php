@@ -169,14 +169,15 @@
          //Show everything we found
      echo "<br> Here's the data contained in the table Responses: <br>";
      while($row = $results->fetch(PDO::FETCH_ASSOC)){
-         echo "ID: " . $row['id'] .  
-             " | Name: " . $row['name'] . 
-             " | Email: " . $row['email'] . 
-             " | Age: " . $row['age'] . 
-             " | Gender: " . $row['gender'] . 
-             " | Country: " . $row['country'] . 
-             " | Comments: " . $row['comments'] . 
-             " | Interests: " . $row['interests'] . "<br>";
+        echo "<tr>
+        <td>" . $row["name"] . "</td>
+        <td>" . $row["email"] . "</td>
+        <td>" . $row["age"] . "</td>
+        <td>" . $row["gender"] . "</td>
+        <td>" . $row["interests"] . "</td>
+        <td>" . $row["country"] . "</td>
+        <td>" . $row["comments"] . "</td>
+      </tr>";
      }
         ?>
     </table>

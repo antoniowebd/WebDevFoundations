@@ -37,7 +37,8 @@ try{
                ('Hoverboard', 500.00, 8),
                ('Jetpack', 1000.00, 9),
                ('Invisibility Cloak', 200.00, 7),
-               ('Time Machine', 10000.00, 10)";
+               ('Time Machine', 10000.00, 10),
+               ('Excalibur', 150.00, 10)";
     
     $pdo->exec($insertProduct);
 

@@ -152,7 +152,34 @@
     <div id="form-response">
         <?php echo $formErr;?>
     </div>
+    <!-- Display Table of Submitted Responses -->
 
+    <h2>Submitted Responses</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Interests</th>
+            <th>Country</th>
+            <th>Comments</th>
+        </tr>
+        <?php
+         //Show everything we found
+     echo "<br> Here's the data contained in the table Responses: <br>";
+     while($row = $results->fetch(PDO::FETCH_ASSOC)){
+         echo "ID: " . $row['id'] .  
+             " | Name: " . $row['name'] . 
+             " | Email: " . $row['email'] . 
+             " | Age: " . $row['age'] . 
+             " | Gender: " . $row['gender'] . 
+             " | Country: " . $row['country'] . 
+             " | Comments: " . $row['comments'] . 
+             " | Interests: " . $row['interests'] . "<br>";
+     }
+        ?>
+    </table>
    
 </body>
 </html>

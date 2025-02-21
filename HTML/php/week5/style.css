@@ -1,0 +1,145 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Title Styles */
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Container */
+form {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Label and Input Fields */
+label {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: block;
+    color: #2c3e50;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Error Message Styles */
+.error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+}
+
+/* Radio Buttons and Checkboxes */
+.radio-group {
+    margin-bottom: 15px;
+}
+
+.radio-group input {
+    margin-right: 10px;
+}
+
+.radio-group label {
+    font-size: 1rem;
+    margin-right: 15px;
+}
+
+/* Submitted Responses Table */
+table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px 20px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Footer or Form Response Container */
+#form-response {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #e74c3c;
+}
+
+/* Small screen responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    table th, table td {
+        padding: 8px 10px;
+    }
+}

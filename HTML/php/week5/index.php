@@ -63,7 +63,7 @@
     //insert
     $string=implode(", ", $interests);
     $insertProduct = "
-        INSERT INTO responses (name, email, age, gender, country, comments, interests)
+        INSERT INTO responses_1 (name, email, age, gender, country, comments, interests)
         VALUES ('$name', '$email', $age, '$gender', '$country', '$comments', '$string')";
               
     $pdo->exec($insertProduct);
@@ -154,7 +154,7 @@
         </tr>
         <?php
      //Let's get all the cool products
-     $results = $pdo->query("SELECT * FROM responses");        
+     $results = $pdo->query("SELECT * FROM responses_1");        
          //Show everything we found
      echo "Here's the data contained in the table Responses:" . "<br>";
      while($row = $results->fetch(PDO::FETCH_ASSOC)){

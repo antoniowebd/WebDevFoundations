@@ -3,6 +3,13 @@
 <head>
     <title>Week 5 Homework: Survey Form Design</title>
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        // JavaScript function to reset form after submission
+        function resetForm() {
+            document.getElementById("surveyForm").reset();  // Reset the form
+        }
+    </script>
 </head>
 <body>
     <h1>Survey Form</h1>

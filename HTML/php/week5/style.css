@@ -1,120 +1,113 @@
-/* Basic Reset */
+/* General reset and body styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7fb;
-    color: #333;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    color: #333;
 }
 
-/* Title Styles */
-h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
+/* Center all content within the body */
+h1, h2 {
     text-align: center;
-    margin-bottom: 20px;
+    color: #4CAF50;
 }
 
-/* Form Container */
+#form-response {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Style for the form */
 form {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
+    background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 30px;
 }
 
-/* Form Label and Input Fields */
 label {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+    font-weight: bold;
     display: block;
-    color: #2c3e50;
+    margin-bottom: 5px;
+    color: #333;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="number"],
-select,
-textarea {
+textarea,
+select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
-textarea {
-    resize: vertical;
-}
-
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-    background-color: #2980b9;
-}
-
-/* Error Message Styles */
-.error {
-    color: #e74c3c;
-    font-size: 0.9rem;
-}
-
-/* Radio Buttons and Checkboxes */
-.radio-group {
-    margin-bottom: 15px;
-}
-
-.radio-group input {
+input[type="radio"],
+input[type="checkbox"] {
     margin-right: 10px;
 }
 
-.radio-group label {
-    font-size: 1rem;
-    margin-right: 15px;
+.radio-group {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
 }
 
-/* Submitted Responses Table */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+/* Table styling */
 table {
-    width: 100%;
+    width: 90%;
+    max-width: 800px;
     margin-top: 30px;
     border-collapse: collapse;
+    text-align: left;
     background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 table th, table td {
-    padding: 12px 20px;
-    text-align: left;
+    padding: 12px;
     border: 1px solid #ddd;
 }
 
 table th {
-    background-color: #3498db;
+    background-color: #4CAF50;
     color: white;
 }
 
@@ -122,24 +115,21 @@ table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-/* Footer or Form Response Container */
-#form-response {
-    margin-top: 20px;
-    font-size: 1.1rem;
-    color: #e74c3c;
+table tr:hover {
+    background-color: #f1f1f1;
 }
 
-/* Small screen responsiveness */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
+table td {
+    text-align: center;
+}
 
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
     form {
         width: 90%;
     }
 
-    table th, table td {
-        padding: 8px 10px;
+    table {
+        width: 100%;
     }
 }

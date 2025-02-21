@@ -109,6 +109,8 @@
         </div>
         <span class="error"><?php echo $genderErr;?></span><br><br>
 
+        
+
         <label for="interests">Interests:</label>
         <div class="radio-group">
             <input type="checkbox" id="sports" name="interests[]" value="sports" <?php if (in_array("sports", $interests)) echo "checked";?>>

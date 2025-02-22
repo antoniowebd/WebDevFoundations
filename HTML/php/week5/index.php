@@ -47,7 +47,7 @@
         $name = test_input($_POST["name"]);
         $email = test_input($_POST["email"]);
         $age = test_input($_POST["age"]);
-        $gender = test_input($_POST["gender"]);
+        $gender = isset($_POST["gender"]) ? test_input($_POST["gender"]) : '';
         $country = test_input($_POST["country"]);
         $comments = test_input($_POST["comments"]);
         $interests = isset($_POST["interests"]) ? $_POST["interests"] : array();
@@ -81,9 +81,11 @@
 
     // Sanatization Function
     function test_input($data) {
+        if (isset($data)){
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
+        }
         return $data;
     }
 

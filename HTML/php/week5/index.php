@@ -13,36 +13,28 @@
 </head>
 <body>
     <h1>Survey Form</h1>
-    <!-- Add Database Connection -->
     <?php
-    //Secret connecction details
-    $host = 'php-mysql-exercisedb.slccwebdev.com'; //Where out database is located
-    $dbname = 'php_mysql_exercisedb'; //Name of our database
-    $username = 'phpmysqlexercise'; //Username to access the database
-    $password = 'mysqlexercise'; //Password to access the database
+    // Secret connection details
+    $host = 'php-mysql-exercisedb.slccwebdev.com'; 
+    $dbname = 'php_mysql_exercisedb'; 
+    $username = 'phpmysqlexercise'; 
+    $password = 'mysqlexercise'; 
 
     // Create connection
     try {
-        //DB configuration
         $dsn = "mysql:host=$host; dbname=$dbname";
-    //    $username="phpmysqlexercise";
-    //    $password="mysqlexercise";
-        //PDO connection
-        $pdo= new PDO($dsn,$username,$password);
+        $pdo = new PDO($dsn, $username, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        //echo "Connected Successfully" . "<br>";
-    } 
-    catch(PDOException $e){
+    } catch(PDOException $e){
         echo "Connection failed: " . $e->getMessage();
     }
 
     // PHP Form Validation
-    // Declare Variables
     $name = $email = $age = $gender = $country = $comments = "";
     $interests = array();
     $nameErr = $emailErr = $ageErr = $genderErr = $formErr = "";
 
-    // Sanatize Data
+    // Sanitize Data
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = test_input($_POST["name"]);
         $email = test_input($_POST["email"]);
@@ -68,6 +60,8 @@
     
         // Proceed with database insert if no errors
         if (empty($nameErr) && empty($emailErr) && empty($ageErr) && empty($genderErr)) {
+            $interestsString = implode(", ", $interests);  // Convert array to string
+            
             // Prepared statement to avoid SQL injection
             $insertProduct = "
                 INSERT INTO responses_1 (name, email, age, gender, country, comments, interests)
@@ -84,7 +78,6 @@
                 $stmt->bindParam(':gender', $gender);
                 $stmt->bindParam(':country', $country);
                 $stmt->bindParam(':comments', $comments);
-                $interestsString= implode(", ", $interests);
                 $stmt->bindParam(':interests', $interestsString);
     
                 // Execute the statement
@@ -97,23 +90,18 @@
         }
     }
 
-    // Sanatization Function
+    // Sanitization Function
     function test_input($data) {
         if (isset($data)){
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
         }
         return $data;
     }
-
     ?>
 
-<!-- Survey Form -->
-<!-- Update Form Action & Form Method -->
-<!-- Update to Display Errors & Success Messages -->
-<form id="surveyForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" onsubmit="resetForm()">
-    <!--<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">-->
+    <form id="surveyForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" onsubmit="resetForm()">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" value="<?php echo $name;?>" required>
         <span class="error"><?php echo $nameErr;?></span><br><br>
@@ -136,8 +124,6 @@
             <label for="other">Other</label>
         </div>
         <span class="error"><?php echo $genderErr;?></span><br><br>
-
-        
 
         <label for="interests">Interests:</label>
         <div class="radio-group">
@@ -163,11 +149,9 @@
         <input type="submit" value="Submit">
     </form>
 
-    <!-- Add Form Response -->
     <div id="form-response">
         <?php echo $formErr;?>
     </div>
-    <!-- Display Table of Submitted Responses -->
 
     <h2>Submitted Responses</h2>
     <table border="1">
@@ -181,23 +165,19 @@
             <th>Comments</th>
         </tr>
         <?php
-     //Let's get all the cool products
-     $results = $pdo->query("SELECT * FROM responses_1");        
-         //Show everything we found
-     echo "Here's the data contained in the table Responses:" . "<br>";
-     while($row = $results->fetch(PDO::FETCH_ASSOC)){
-        echo "<tr>
-        <td>" . $row["name"] . "</td>
-        <td>" . $row["email"] . "</td>
-        <td>" . $row["age"] . "</td>
-        <td>" . $row["gender"] . "</td>
-        <td>" . $row["interests"] . "</td>
-        <td>" . $row["country"] . "</td>
-        <td>" . $row["comments"] . "</td>
-      </tr>";
-     }
+        $results = $pdo->query("SELECT * FROM responses_1");
+        while($row = $results->fetch(PDO::FETCH_ASSOC)){
+            echo "<tr>
+            <td>" . $row["name"] . "</td>
+            <td>" . $row["email"] . "</td>
+            <td>" . $row["age"] . "</td>
+            <td>" . $row["gender"] . "</td>
+            <td>" . $row["interests"] . "</td>
+            <td>" . $row["country"] . "</td>
+            <td>" . $row["comments"] . "</td>
+            </tr>";
+        }
         ?>
     </table>
-   
 </body>
 </html>

@@ -50,8 +50,8 @@
         $gender = isset($_POST["gender"]) ? test_input($_POST["gender"]) : '';
         $country = test_input($_POST["country"]);
         $comments = test_input($_POST["comments"]);
-        $interests = isset($_POST["interests"]) ? $_POST["interests"] : array();
-
+        $interests = isset($_POST["interests"]) ? implode(", ", $_POST["interests"]) : '';  // Ensuring that interests are not empty
+    
         // Validate Data
         if (empty($name)) {
             $nameErr = "Name is required";
@@ -66,18 +66,35 @@
             $genderErr = "Gender is required";
         }
     
-
-    //insert
-    $string=implode(", ", $interests);
-    $insertProduct = "
-        INSERT INTO responses_1 (name, email, age, gender, country, comments, interests)
-        VALUES ('$name', '$email', $age, '$gender', '$country', '$comments', '$string')";
-              
-    $pdo->exec($insertProduct);
-} else {
-    $formErr = "Please fill in all required fields correctly.";
-}
-
+        // Proceed with database insert if no errors
+        if (empty($nameErr) && empty($emailErr) && empty($ageErr) && empty($genderErr)) {
+            // Prepared statement to avoid SQL injection
+            $insertProduct = "
+                INSERT INTO responses (name, email, age, gender, country, comments, interests)
+                VALUES (:name, :email, :age, :gender, :country, :comments, :interests)";
+            
+            try {
+                // Prepare statement
+                $stmt = $pdo->prepare($insertProduct);
+    
+                // Bind parameters
+                $stmt->bindParam(':name', $name);
+                $stmt->bindParam(':email', $email);
+                $stmt->bindParam(':age', $age);
+                $stmt->bindParam(':gender', $gender);
+                $stmt->bindParam(':country', $country);
+                $stmt->bindParam(':comments', $comments);
+                $stmt->bindParam(':interests', $interests);
+    
+                // Execute the statement
+                $stmt->execute();
+            } catch (PDOException $e) {
+                echo "Error: " . $e->getMessage();
+            }
+        } else {
+            $formErr = "Please fill in all required fields correctly.";
+        }
+    }
 
     // Sanatization Function
     function test_input($data) {

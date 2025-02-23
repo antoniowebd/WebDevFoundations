@@ -1,5 +1,5 @@
 use php_mysql_exercisedb;
-
+    
 CREATE TABLE responses_1(
     id INT auto_increment PRIMARY KEY,
     name VARCHAR(100) NOT NULL,

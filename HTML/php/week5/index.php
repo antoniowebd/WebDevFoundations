@@ -4,17 +4,11 @@
     <title>Week 5 Homework: Survey Form Design</title>
     <link rel="stylesheet" href="style.css">
 
-    <script>
-        // JavaScript function to reset form after submission
-        function resetForm() {
-            document.getElementById("surveyForm").reset();  // Reset the form
-        }
-    </script>
 </head>
 <body>
     <h1>Survey Form</h1>
     <?php
-    // Secret connection details
+    // Connection details
     $host = 'php-mysql-exercisedb.slccwebdev.com'; 
     $dbname = 'php_mysql_exercisedb'; 
     $username = 'phpmysqlexercise'; 
@@ -101,7 +95,7 @@
     }
     ?>
 
-    <form id="surveyForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" onsubmit="resetForm()">
+    <form id="surveyForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" value="<?php echo $name;?>" required>
         <span class="error"><?php echo $nameErr;?></span><br><br>
@@ -178,6 +172,7 @@
             </tr>";
         }
         ?>
+        
     </table>
 </body>
 </html>

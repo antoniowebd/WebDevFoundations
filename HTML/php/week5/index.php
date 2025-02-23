@@ -23,7 +23,7 @@
         echo "Connection failed: " . $e->getMessage();
     }
 
-    // PHP Form Validation
+    // Declare variables
     $name = $email = $age = $gender = $country = $comments = "";
     $interests = array();
     $nameErr = $emailErr = $ageErr = $genderErr = $formErr = "";
@@ -76,6 +76,10 @@
     
                 // Execute the statement
                 $stmt->execute();
+                echo"<p>Thank you for your submission!<p>";
+                $name = $email = $age = $gender = $country = $comments = "";
+                $interests = array();
+
             } catch (PDOException $e) {
                 echo "Error: " . $e->getMessage();
             }
@@ -159,7 +163,9 @@
             <th>Comments</th>
         </tr>
         <?php
+        //Fetch data
         $results = $pdo->query("SELECT * FROM responses_1");
+        //Display data
         while($row = $results->fetch(PDO::FETCH_ASSOC)){
             echo "<tr>
             <td>" . $row["name"] . "</td>

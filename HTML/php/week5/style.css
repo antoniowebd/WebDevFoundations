@@ -16,6 +16,11 @@ body {
     color: #333;
 }
 
+p{
+    background-color: black;
+    color: goldenrod;
+}
+
 /* Center all content within the body */
 h1, h2 {
     text-align: center;

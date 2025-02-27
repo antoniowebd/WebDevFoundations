@@ -15,7 +15,7 @@
     }
 
 
-
+/*
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $_POST['username'];
     $pass = $_POST['password'];
@@ -31,5 +31,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$conn->close();
+//$conn->close();*/
 ?>

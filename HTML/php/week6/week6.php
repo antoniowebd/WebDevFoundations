@@ -25,6 +25,11 @@ if ($conn->connect_error) {
 $user=$pass=""; // Initialize variables
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    //Sanitize data
+    $user = test_input($_POST["username"]);
+    $pass = test_input($_POST["password"]);
+
     $user = $_POST['username'];
     $pass = $_POST['password'];
 
@@ -44,6 +49,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conn->close();
+
+function test_input($data) {
+    if (isset($data)){
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+    }
+    return $data;
+}
+
 ?>
 
 <form id="Injection" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">

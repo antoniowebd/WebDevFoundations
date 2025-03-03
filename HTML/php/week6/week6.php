@@ -50,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 
+// Sanitization Function
 function test_input($data) {
     if (isset($data)){
         $data = trim($data);

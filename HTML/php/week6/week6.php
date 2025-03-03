@@ -1,8 +1,11 @@
 <?php
-$servername = "localhost";
-$username = "yourusername";
-$password = "yourpassword";
-$dbname = "yourdatabase";
+
+
+$servername = 'php-mysql-exercisedb.slccwebdev.com'; 
+$dbname = 'php_mysql_exercisedb'; 
+$username = 'phpmysqlexercise'; 
+$password = 'mysqlexercise'; 
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -17,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pass = $_POST['password'];
 
     // Secure SQL query using prepared statements
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
+    $stmt = $conn->prepare("SELECT * FROM users_juan WHERE username = ? AND password = ?");
     $stmt->bind_param("ss", $user, $pass);
     $stmt->execute();
     $result = $stmt->get_result();

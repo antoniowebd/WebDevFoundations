@@ -1,6 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Week 6 Homework: SQL Injection Demo</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+</head>
+<body>
+    <h1>SQL Injection Demonstration</h1>
+
 <?php
-
-
 $servername = 'php-mysql-exercisedb.slccwebdev.com'; 
 $dbname = 'php_mysql_exercisedb'; 
 $username = 'phpmysqlexercise'; 
@@ -14,6 +21,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+$user=$pass=""; // Initialize variables
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $_POST['username'];
@@ -36,3 +45,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
+
+<form id="Injection" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
